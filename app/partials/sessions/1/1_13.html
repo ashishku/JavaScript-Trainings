@@ -1,0 +1,62 @@
+<ul>
+  <li>
+    <strong>typeof</strong><br/>
+    Its value is a string that specifies the type of the operand:
+    <table class="table table-striped table-bordered table-condensed">
+      <tr>
+        <th>x</th>
+        <th>typeof x</th>
+      </tr>
+      <tr>
+        <td>undefined</td>
+        <td>"undefined"</td>
+      </tr>
+      <tr>
+        <td>null</td>
+        <td>"object"</td>
+      </tr>
+      <tr>
+        <td>true or false</td>
+        <td>"boolean"</td>
+      </tr>
+      <tr>
+        <td>any number or NaN</td>
+        <td>"number"</td>
+      </tr>
+      <tr>
+        <td>any string</td>
+        <td>"string"</td>
+      </tr>
+      <tr>
+        <td>any function</td>
+        <td>"function"</td>
+      </tr>
+      <tr>
+        <td>any nonfunction native object</td>
+        <td> "object"</td>
+      </tr>
+      <tr>
+        <td>any host object</td>
+        <td>An implementation-defined string, but not “undefined”, “boolean”, “number”, or “string”.</td>
+      </tr>
+    </table>
+  </li>
+
+  <li>
+    <strong>delete</strong><br/>
+    delete is a unary operator that attempts to delete the object property or array element specified as its operand.
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>var</span> o <span style='color:#308080; '>=</span> <span style='color:#406080; '>{</span> x<span style='color:#406080; '>:</span> <span style='color:#008c00; '>1</span><span style='color:#308080; '>,</span> y<span style='color:#406080; '>:</span> <span style='color:#008c00; '>2</span><span style='color:#406080; '>}</span><span style='color:#406080; '>;</span>          <span style='color:#595979; '>// Start with an object</span>
+  delete o<span style='color:#308080; '>.</span>x<span style='color:#406080; '>;</span>                     <span style='color:#595979; '>// Delete one of its properties</span>
+  <span style='color:#800000; '>"</span><span style='color:#1060b6; '>x</span><span style='color:#800000; '>"</span> <span style='color:#200080; font-weight:bold; '>in</span> o                        <span style='color:#595979; '>// false: the property does not exist anymore</span>
+
+  <span style='color:#200080; font-weight:bold; '>var</span> a <span style='color:#308080; '>=</span> <span style='color:#308080; '>[</span><span style='color:#008c00; '>1</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>2</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>3</span><span style='color:#308080; '>]</span><span style='color:#406080; '>;</span>                <span style='color:#595979; '>// Start with an array</span>
+  delete a<span style='color:#308080; '>[</span><span style='color:#008c00; '>2</span><span style='color:#308080; '>]</span><span style='color:#406080; '>;</span>                    <span style='color:#595979; '>// Delete the last element of the array</span>
+  a<span style='color:#308080; '>.</span>length                        <span style='color:#595979; '>// 2: array only has two elements now</span>
+</pre>
+    Note that a deleted property or array element is not merely set to the undefined value. When a property is deleted, the property ceases to exist. Attempting to read a non-existent property returns undefined , but you can test for the actual existence of a property with the in operator.<br/>
+    delete returns true if it successfully deletes the specified lvalue.<br />
+Not all properties can be deleted, however: some built-in core and client-side properties are immune from deletion, and user-defined variables declared with the var statement cannot be deleted. Functions defined with the function statement and declared function parameters cannot be deleted either.<br />
+In ECMAScript 5 strict mode, delete raises a SyntaxError if its operand is an unqualified identifier such as a variable, function, or function parameter.
+  </li>
+</ul>

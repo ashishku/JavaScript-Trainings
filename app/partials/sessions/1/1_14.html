@@ -1,0 +1,31 @@
+<ul>
+  <li>
+    <strong>void</strong><br/>
+    This operator is unusual and infrequently used: it evaluates its operand, then discards the value and returns undefined .
+    <br/>Since the operand value is discarded, using the void operator makes sense only if the operand has side effects.
+    <br/>The most common use for this operator is in a client-side javascript: URL, where it allows you to evaluate an expression for its side effects without the browser displaying the value of the evaluated expression.
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#308080; '>&lt;</span>a href<span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>javascript:void window.open();</span><span style='color:#800000; '>"</span><span style='color:#308080; '>></span>Open New Window<span style='color:#308080; '>&lt;</span><span style='color:#308080; '>/</span>a<span style='color:#308080; '>></span>
+</pre>
+  </li>
+
+  <li>
+    <strong>Comma (,)</strong><br/>
+    The comma operator is a binary operator whose operands may be of any type. It evaluates its left operand, evaluates its right operand, and then returns the value of the right operand.
+    <br/>Thus, the following line:
+<pre style='color:#000020;background:#f6f8ff;'>
+  i<span style='color:#308080; '>=</span><span style='color:#008c00; '>0</span><span style='color:#308080; '>,</span> j<span style='color:#308080; '>=</span><span style='color:#008c00; '>1</span><span style='color:#308080; '>,</span> k<span style='color:#308080; '>=</span><span style='color:#008c00; '>2</span><span style='color:#406080; '>;</span>
+</pre>
+<pre style='color:#000020;background:#f6f8ff;'>
+  i <span style='color:#308080; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#406080; '>;</span> j <span style='color:#308080; '>=</span> <span style='color:#008c00; '>1</span><span style='color:#406080; '>;</span> k <span style='color:#308080; '>=</span> <span style='color:#008c00; '>2</span><span style='color:#406080; '>;</span>
+</pre>
+  The left-hand expression is always evaluated, but its value is discarded, which means that it only makes sense to use the comma operator when the left-hand expression has side effects. The only situation in which the comma operator is commonly used is with a for loop that has multiple loop variables:
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#595979; '>// The first comma below is part of the syntax of the var statement</span>
+  <span style='color:#595979; '>// The second comma is the comma operator: it lets us squeeze 2</span>
+  <span style='color:#595979; '>// expressions (i++ and j--) into a statement (the for loop) that expects 1.</span>
+  <span style='color:#200080; font-weight:bold; '>for</span><span style='color:#308080; '>(</span><span style='color:#200080; font-weight:bold; '>var</span> i<span style='color:#308080; '>=</span><span style='color:#008c00; '>0</span><span style='color:#308080; '>,</span>j<span style='color:#308080; '>=</span><span style='color:#008c00; '>10</span><span style='color:#406080; '>;</span> i <span style='color:#308080; '>&lt;</span> j<span style='color:#406080; '>;</span> i<span style='color:#308080; '>++</span><span style='color:#308080; '>,</span>j<span style='color:#308080; '>--</span><span style='color:#308080; '>)</span>
+  console<span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>log</span><span style='color:#308080; '>(</span>i<span style='color:#308080; '>+</span>j<span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+</pre>
+  </li>
+</ul>

@@ -1,0 +1,34 @@
+<ul>
+  <li>
+    <strong>in</strong><br/>
+    The in operator expects a left-side operand that is or can be converted to a string. It expects a right-side operand that is an object. It evaluates to true if the left-side value is the name of a property of the right-side object. For example:
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>var</span> point <span style='color:#308080; '>=</span> <span style='color:#406080; '>{</span> x<span style='color:#406080; '>:</span><span style='color:#008c00; '>1</span><span style='color:#308080; '>,</span> y<span style='color:#406080; '>:</span><span style='color:#008c00; '>1</span> <span style='color:#406080; '>}</span><span style='color:#406080; '>;</span>       <span style='color:#595979; '>// Define an object</span>
+  <span style='color:#800000; '>"</span><span style='color:#1060b6; '>x</span><span style='color:#800000; '>"</span> <span style='color:#200080; font-weight:bold; '>in</span> point                    <span style='color:#595979; '>// true: object has property named "x"</span>
+  <span style='color:#800000; '>"</span><span style='color:#1060b6; '>z</span><span style='color:#800000; '>"</span> <span style='color:#200080; font-weight:bold; '>in</span> point                    <span style='color:#595979; '>// false: object has no "z" property.</span>
+  <span style='color:#800000; '>"</span><span style='color:#1060b6; '>toString</span><span style='color:#800000; '>"</span> <span style='color:#200080; font-weight:bold; '>in</span> point             <span style='color:#595979; '>// true: object inherits toString method</span>
+
+  <span style='color:#200080; font-weight:bold; '>var</span> data <span style='color:#308080; '>=</span> <span style='color:#308080; '>[</span><span style='color:#008c00; '>7</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>8</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>9</span><span style='color:#308080; '>]</span><span style='color:#406080; '>;</span>             <span style='color:#595979; '>// An array with elements 0, 1, and 2</span>
+  <span style='color:#800000; '>"</span><span style='color:#1060b6; '>0</span><span style='color:#800000; '>"</span> <span style='color:#200080; font-weight:bold; '>in</span> data                     <span style='color:#595979; '>// true: array has an element "0"</span>
+  <span style='color:#008c00; '>1</span> <span style='color:#200080; font-weight:bold; '>in</span> data                       <span style='color:#595979; '>// true: numbers are converted to strings</span>
+  <span style='color:#008c00; '>3</span> <span style='color:#200080; font-weight:bold; '>in</span> data                       <span style='color:#595979; '>// false: no element 3</span>
+</pre>
+  </li>
+
+  <li>
+    <strong>instanceof</strong><br/>
+    The instanceof operator expects a left-side operand that is an object and a right-side operand that identifies a class of objects. The operator evaluates to true if the left-side object is an instance of the right-side class and evaluates to false otherwise.
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>var</span> d <span style='color:#308080; '>=</span> <span style='color:#200080; font-weight:bold; '>new</span> <span style='color:#007d45; '>Date</span><span style='color:#308080; '>(</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>         <span style='color:#595979; '>// Create a new object with the Date() constructor</span>
+  d <span style='color:#200080; font-weight:bold; '>instanceof</span> <span style='color:#007d45; '>Date</span><span style='color:#406080; '>;</span>          <span style='color:#595979; '>// Evaluates to true; d was created with Date()</span>
+  d <span style='color:#200080; font-weight:bold; '>instanceof</span> <span style='color:#007d45; '>Object</span><span style='color:#406080; '>;</span>        <span style='color:#595979; '>// Evaluates to true; all objects are instances of Object</span>
+  d <span style='color:#200080; font-weight:bold; '>instanceof</span> <span style='color:#007d45; '>Number</span><span style='color:#406080; '>;</span>        <span style='color:#595979; '>// Evaluates to false; d is not a Number object</span>
+
+  <span style='color:#200080; font-weight:bold; '>var</span> a <span style='color:#308080; '>=</span> <span style='color:#308080; '>[</span><span style='color:#008c00; '>1</span><span style='color:#308080; '>,</span> <span style='color:#008c00; '>2</span><span style='color:#308080; '>,</span> <span style='color:#008c00; '>3</span><span style='color:#308080; '>]</span><span style='color:#406080; '>;</span>          <span style='color:#595979; '>// Create an array with array literal syntax</span>
+  a <span style='color:#200080; font-weight:bold; '>instanceof</span> <span style='color:#007d45; '>Array</span><span style='color:#406080; '>;</span>         <span style='color:#595979; '>// Evaluates to true; a is an array</span>
+  a <span style='color:#200080; font-weight:bold; '>instanceof</span> <span style='color:#007d45; '>Object</span><span style='color:#406080; '>;</span>        <span style='color:#595979; '>// Evaluates to true; all arrays are objects</span>
+  a <span style='color:#200080; font-weight:bold; '>instanceof</span> <span style='color:#007d45; '>RegExp</span><span style='color:#406080; '>;</span>        <span style='color:#595979; '>// Evaluates to false; arrays are not regular expressions</span>
+</pre>
+    Note that all objects are instances of Object . instanceof considers the “superclasses” when deciding whether an object is an instance of a class. If the left-side operand of instanceof is not an object, instanceof returns false . If the right-hand side is not a function, it throws a TypeError.
+  </li>
+</ul>

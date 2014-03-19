@@ -1,0 +1,19 @@
+<h1>Agenda</h1>
+<section>
+    <ol>
+    <% _.each(sessions, function(session) { %>
+        <li>
+            <a href="<%= session.url %>"><%= session.title %></a>
+            <% if(_.isArray(session.topics)) { %>
+                <ol>
+                <% _.each(session.topics, function(topic) { %>
+                    <li>
+                        <a href="<%= topic.url %>"><%= topic.title %></a>
+                    </li>
+                <% }); %>
+                </ol>
+            <% } %>
+        </li>
+    <% }); %>
+    </ol>
+</section>

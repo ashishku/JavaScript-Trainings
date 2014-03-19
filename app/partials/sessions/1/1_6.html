@@ -1,0 +1,70 @@
+<div>
+  <details open class="well">
+    <summary>
+      Creating Variables
+    </summary>
+    <ul>
+      <li>
+        <em>Declared Variables</em><br/>
+        Variables can be declated with <span class="label label-info">var</span> keyword.
+      </li>
+
+      <li>
+        <em>Undeclared Variables</em><br />
+        Its not mandatory to declare them, though in ECMAScript5 under strict mode an error is thrown for undeclared variables.
+      </li>
+
+      <li>
+        <em>Repeated declaration</em><br />
+        It is legal and harmless to declare a variable more than once with the var statement. If the repeated declaration has an initializer, it acts as if it were simply an assignment statement.
+      </li>
+    </ul>
+  </details>
+
+  <details class="well">
+    <summary>
+      Variable scopes
+    </summary>
+
+    <ul>
+      <li>
+        <em>Undeclared variables</em><br/>
+        undeclared variables under global scope.
+      </li>
+
+      <li>
+        <em>Declared variables</em><br/>
+        Declared variables have local scopes within the region they are declared.
+
+        <ul>
+          <li>
+            <em>Global Variables</em><br/>
+            A variable declared in the global region (i.e outside any function) has a global scope.
+          </li>
+
+          <li>
+            <em>Function socpe</em><br/>
+            Varibales in JavaScript do not support block scopes, instead they have function scopes.<br />
+            It does not matter where you define your variable in  a function they are vissible through out the function. All parameters to function have the same scope.
+            <br />
+            A function scope variable hides the same named global variable.
+          </li>
+
+          <li>
+            <em>Scope chain / Closure scope</em><br/>
+            This scope chain is a list or chain of objects that defines the variables that are “in scope” for that code.
+            <br />
+            In top-level JavaScript code , the scope chain consists of a single object, the global object.
+            In a non-nested function, the scope chain consists of two objects. The first is the object that defines the function’s parameters and local variables, and the second is the global object.
+            In a nested function, the scope chain has three or more objects.
+            <br/>
+            When a function is defined, it stores the scope chain then in effect.
+            When that function is invoked, it creates a new object to store its local variables, and adds that new object to the stored scope chain to create a new, longer, chain
+            that represents the scope for that function invocation.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </details>
+
+</div>

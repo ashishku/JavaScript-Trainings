@@ -1,0 +1,103 @@
+<div class="row">
+  <table class="table table-striped table-bordered table-condensed">
+    <caption><b>Operators</b></caption>
+    <tr>
+      <th>Operator</th>
+      <th>Operation</th>
+      <th>Associativity</th>
+      <th>Number of operands</th>
+      <th>Types</th>
+    </tr>
+    <tr class="success">
+      <td>==</td>
+      <td>Test for equality</td>
+      <td>Left</td>
+      <td>2</td>
+      <td>any,any-&gt;bool</td>
+    </tr>
+    <tr class="success">
+      <td>!=</td>
+      <td>Test for inequality</td>
+      <td>Left</td>
+      <td>2</td>
+      <td>any,any-&gt;bool</td>
+    </tr>
+    <tr class="success">
+      <td>===</td></td>
+      <td>Test for strict equality</td>
+      <td>Left</td>
+      <td>2</td>
+      <td>any,any-&gt;bool</td>
+    </tr>
+    <tr class="success">
+      <td>!==</td>
+      <td>Test for strict inequality</td>
+      <td>Left</td>
+      <td>2</td>
+      <td>any,any-&gt;bool</td>
+    </tr>
+    <tr class="error">
+      <td>&amp;</td>
+      <td>Compute bitwise AND</td>
+      <td>Left</td>
+      <td>2</td>
+      <td>int,int-&gt;int</td>
+    </tr>
+    <tr class="warning">
+      <td>^</td>
+      <td>Compute bitwise XOR</td>
+      <td>Left</td>
+      <td>2</td>
+      <td>int,int-&gt;int</td>
+    </tr>
+    <tr class="info">
+      <td>|</td>
+      <td>Compute bitwise OR</td>
+      <td>Left</td>
+      <td>2</td>
+      <td>int,int-&gt;int</td>
+    </tr>
+    <tr class="success">
+      <td>&amp;&amp;</td>
+      <td>Compute logical AND</td>
+      <td>Left</td>
+      <td>2</td>
+      <td>any,any-&gt;any</td>
+    </tr>
+    <tr class="error">
+      <td>||</td>
+      <td>Compute logical OR</td>
+      <td>Left</td>
+      <td>2</td>
+      <td>any,any-&gt;any</td>
+    </tr>
+    <tr class="warning">
+      <td>?:</td>
+      <td>Choose 2nd or 3rd operand</td>
+      <td>Right</td>
+      <td>3</td>
+      <td>bool,any,any-&gt;any</td>
+    </tr>
+    <tr class="info">
+      <td>=</td>
+      <td>Assign to a variable or property</td>
+      <td>Right</td>
+      <td>2</td>
+      <td>lval,any-&gt;any</td>
+    </tr>
+    <tr class="info">
+      <td>*=, /=, %=, +=,-=, &amp;=, ^=, |=, <<=, &gt;&gt;=, &gt;&gt;&gt;=</td>
+      <td>Operate and assign</td>
+      <td>Right</td>
+      <td>2</td>
+      <td>lval,any-&gt;any</td>
+    </tr>
+    <tr class="success">
+      <td>,</td>
+      <td>Discard 1st operand, return second</td>
+      <td>Left</td>
+      <td>2</td>
+      <td>any,any-&gt;any</td>
+    </tr>
+  </table>
+</div>

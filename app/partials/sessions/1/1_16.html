@@ -1,0 +1,30 @@
+<ul>
+  <li>
+    <strong>Global Eval</strong><br/>
+    When invoked by any other name, eval() would evaluate the string as if it were top-level global code.
+    The evaluated code might define new global variables or global functions, and it might set global variables, but it could not use or modify any variables local to the calling function.
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>var</span> geval <span style='color:#308080; '>=</span> <span style='color:#200080; font-weight:bold; '>eval</span><span style='color:#406080; '>;</span>                   <span style='color:#595979; '>// Using another name does a global eval</span>
+  <span style='color:#200080; font-weight:bold; '>var</span> x <span style='color:#308080; '>=</span> <span style='color:#800000; '>"</span><span style='color:#1060b6; '>global</span><span style='color:#800000; '>"</span><span style='color:#308080; '>,</span> y <span style='color:#308080; '>=</span> <span style='color:#800000; '>"</span><span style='color:#1060b6; '>global</span><span style='color:#800000; '>"</span><span style='color:#406080; '>;</span>     <span style='color:#595979; '>// Two global variables</span>
+  <span style='color:#200080; font-weight:bold; '>function</span> f<span style='color:#308080; '>(</span><span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>                      <span style='color:#595979; '>// This function does a local eval</span>
+    <span style='color:#200080; font-weight:bold; '>var</span> x <span style='color:#308080; '>=</span> <span style='color:#800000; '>"</span><span style='color:#1060b6; '>local</span><span style='color:#800000; '>"</span><span style='color:#406080; '>;</span>                  <span style='color:#595979; '>// Define a local variable</span>
+    <span style='color:#200080; font-weight:bold; '>eval</span><span style='color:#308080; '>(</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>x += 'changed';</span><span style='color:#800000; '>"</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>          <span style='color:#595979; '>// Direct eval sets local variable</span>
+    <span style='color:#200080; font-weight:bold; '>return</span> x<span style='color:#406080; '>;</span>                         <span style='color:#595979; '>// Return changed local variable</span>
+  <span style='color:#406080; '>}</span>
+  <span style='color:#200080; font-weight:bold; '>function</span> g<span style='color:#308080; '>(</span><span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>                      <span style='color:#595979; '>// This function does a global eval</span>
+    <span style='color:#200080; font-weight:bold; '>var</span> y <span style='color:#308080; '>=</span> <span style='color:#800000; '>"</span><span style='color:#1060b6; '>local</span><span style='color:#800000; '>"</span><span style='color:#406080; '>;</span>                  <span style='color:#595979; '>// A local variable</span>
+    geval<span style='color:#308080; '>(</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>y += 'changed';</span><span style='color:#800000; '>"</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>         <span style='color:#595979; '>// Indirect eval sets global variable</span>
+    <span style='color:#200080; font-weight:bold; '>return</span> y<span style='color:#406080; '>;</span>                         <span style='color:#595979; '>// Return unchanged local variable</span>
+  <span style='color:#406080; '>}</span>
+  console<span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>log</span><span style='color:#308080; '>(</span>f<span style='color:#308080; '>(</span><span style='color:#308080; '>)</span><span style='color:#308080; '>,</span> x<span style='color:#308080; '>)</span><span style='color:#406080; '>;</span> <span style='color:#595979; '>// Local variable changed: prints "localchanged global":</span>
+  console<span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>log</span><span style='color:#308080; '>(</span>g<span style='color:#308080; '>(</span><span style='color:#308080; '>)</span><span style='color:#308080; '>,</span> y<span style='color:#308080; '>)</span><span style='color:#406080; '>;</span> <span style='color:#595979; '>// Global variable changed: prints "local globalchanged":</span>
+</pre>
+  </li>
+
+  <li>
+    <strong>Strict eval()</strong><br/>
+    In strict mode, evaluated code can query and set local variables, but it cannot define new variables or functions in the local scope.
+    <br/> strict mode makes “eval” a reserved word. You are not allowed to overwrite the eval() function with a new value.
+    And you are not allowed to declare a variable, function, function parameter, or catch block parameter with the name “eval”.
+  </li>
+</ul>

@@ -1,0 +1,57 @@
+<ul>
+  <li>
+    <strong>+</strong><br/>
+    If either of its operand values is an object, it converts it to a primitive value. Date objects are converted by their toString() method, and all other objects are converted via valueOf().<br/>
+    After object-to-primitive conversion, if either operand is a string, the other is converted to a string and concatenation is performed. <br/>
+    Otherwise, both operands are converted to numbers (or to NaN ) and addition is performed.
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#008c00; '>1</span> <span style='color:#308080; '>+</span> <span style='color:#008c00; '>2</span>           <span style='color:#595979; '>// 3: addition</span>
+  <span style='color:#800000; '>"</span><span style='color:#1060b6; '>1</span><span style='color:#800000; '>"</span> <span style='color:#308080; '>+</span> <span style='color:#800000; '>"</span><span style='color:#1060b6; '>2</span><span style='color:#800000; '>"</span>       <span style='color:#595979; '>// "12": concatenation</span>
+  <span style='color:#800000; '>"</span><span style='color:#1060b6; '>1</span><span style='color:#800000; '>"</span> <span style='color:#308080; '>+</span> <span style='color:#008c00; '>2</span>         <span style='color:#595979; '>// "12": concatenation after number-to-string</span>
+  <span style='color:#008c00; '>1</span> <span style='color:#308080; '>+</span> <span style='color:#406080; '>{</span><span style='color:#406080; '>}</span>          <span style='color:#595979; '>// "1[object Object]": concatenation after object-to-string</span>
+  <span style='color:#0f4d75; '>true</span> <span style='color:#308080; '>+</span> <span style='color:#0f4d75; '>true</span>     <span style='color:#595979; '>// 2: addition after boolean-to-number</span>
+  <span style='color:#008c00; '>2</span> <span style='color:#308080; '>+</span> <span style='color:#0f4d75; '>null</span>        <span style='color:#595979; '>// 2: addition after null converts to 0</span>
+  <span style='color:#008c00; '>2</span> <span style='color:#308080; '>+</span> undefined   <span style='color:#595979; '>// NaN: addition after undefined converts to NaN</span>
+  <span style='color:#595979; '>// Result may depend on the order in which operations are performed</span>
+  <span style='color:#008c00; '>1</span> <span style='color:#308080; '>+</span> <span style='color:#008c00; '>2</span> <span style='color:#308080; '>+</span> <span style='color:#800000; '>"</span><span style='color:#1060b6; '> blind mice</span><span style='color:#800000; '>"</span><span style='color:#406080; '>;</span>    <span style='color:#595979; '>// "3 blind mice"</span>
+  <span style='color:#008c00; '>1</span> <span style='color:#308080; '>+</span> <span style='color:#308080; '>(</span><span style='color:#008c00; '>2</span> <span style='color:#308080; '>+</span> <span style='color:#800000; '>"</span><span style='color:#1060b6; '> blind mice</span><span style='color:#800000; '>"</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>  <span style='color:#595979; '>// "12 blind mice"</span>
+</pre>
+  </li>
+
+  <li>
+    <strong>Unary plus ( + ) &amp; Unary minus ( - )</strong><br/>
+    The unary plus operator converts its operand to a number (or to NaN ) and returns that converted value. When used with an operand that is already a number, it doesn’t do anything.
+    When - is used as a unary operator, it converts its operand to a number, if necessary, and then changes the sign of the result.
+  </li>
+
+  <li>
+    <strong>Equality and Inequality Operators (==, ===, != , !==)</strong>
+
+    <details open>
+      <summary>
+        <em>Strict equality (===, !===)</em>
+      </summary>
+      If the two values have different types, they are not equal.
+      <br/>If both values are null or both values are undefined , they are equal.
+      <br/>If both values are the boolean value true or both are the boolean value false , they are equal.
+      <br/>If one or both values is NaN , they are not equal. The NaN value is never equal to any other value, including itself!!
+      <br/>If both values are numbers and have the same value, they are equal.
+      <br/>If both values are strings and contain exactly the same 16-bit values in the same positions, they are equal.
+      <br/>If both values refer to the same object, array, or function, they are equal. If they refer to different objects they are not equal, even if both objects have identical properties.
+    </details>
+
+    <details>
+      <summary>
+        <em>Non Strict equality (==, !=)</em>
+      </summary>
+      The equality operator == is like the strict equality operator, but it is less strict. If the values of the two operands are not the same type, it attempts some type conversions and tries the comparison again:
+      <br/>If the two values have the same type, test them for strict equality as described above.
+      <br/>If the two values do not have the same type, the == operator may still consider them equal. Use the following rules and type conversions to check for equality:
+      <br/>— If one value is null and the other is undefined , they are equal.
+      <br/>— If one value is a number and the other is a string, convert the string to a number and try the comparison again, using the converted value.
+      <br/>— If either value is true , convert it to 1 and try the comparison again. If either value is false , convert it to 0 and try the comparison again.
+      <br/>— If one value is an object and the other is a number or string, convert the object to a primitive and try the comparison again.
+      <br/>— Any other combinations of values are not equal.
+    </details>
+  </li>
+</ul>
