@@ -1,0 +1,10 @@
+<h1><%= session %></h1>
+<section>
+    <ol>
+    <% _.each(subSessions, function(subSession) { %>
+        <li>
+            <a href="<%= subSession.url %>"><%= subSession.title %></a>
+        </li>
+    <% }); %>
+    </ol>
+</section>

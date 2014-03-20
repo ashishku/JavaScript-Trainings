@@ -1,0 +1,145 @@
+<div class="row">
+  <table class="table table-striped table-bordered table-condensed">
+    <caption><b>Operators</b></caption>
+    <tr>
+      <th>Operator</th>
+      <th>Operation</th>
+      <th>Associativity</th>
+      <th>Number of operands</th>
+      <th>Types</th>
+    </tr>
+    <tr class="success">
+    <td>++</td>
+    <td>Pre- or post-increment</td>
+    <td>R</td>
+    <td>1</td>
+    <td>lval→num</td>
+  </tr>
+  <tr class="success">
+    <td>--</td>
+    <td>Pre- or post-decrement</td>
+    <td>R</td>
+    <td>1</td>
+    <td>lval→num</td>
+  </tr>
+  <tr class="success">
+    <td>-</td>
+    <td>Negate number</td>
+    <td>R</td>
+    <td>1</td>
+    <td>num→num</td>
+  </tr>
+  <tr class="success">
+    <td>+</td>
+    <td>Convert to number</td>
+    <td>R</td>
+    <td>1</td>
+    <td>num→num</td>
+  </tr>
+  <tr class="success">
+    <td>~</td>
+    <td>Invert bits</td>
+    <td>R</td>
+    <td>1</td>
+    <td>int→int</td>
+  </tr>
+  <tr class="success">
+    <td>!</td>
+    <td>Invert boolean value</td>
+    <td>R</td>
+    <td>1</td>
+    <td>bool→bool</td>
+  </tr>
+  <tr class="success">
+    <td>delete</td>
+    <td>Remove a property</td>
+    <td>R</td>
+    <td>1</td>
+    <td>lval→bool</td>
+  </tr>
+  <tr class="success">
+    <td>typeof</td>
+    <td>Determine type of operand</td>
+    <td>R</td>
+    <td>1</td>
+    <td>any→str</td>
+  </tr>
+  <tr class="success">
+    <td>void</td>
+    <td>Return undefined value</td>
+    <td>R</td>
+    <td>1</td>
+    <td>any→undef</td>
+  </tr>
+  <tr class="error">
+    <td>* , / , %</td>
+    <td>Multiply, divide, remainder</td>
+    <td>L</td>
+    <td>2</td>
+    <td>num,num→num</td>
+  </tr>
+  <tr class="warning">
+    <td>+ , -</td>
+    <td>Add, subtract</td>
+    <td>L</td>
+    <td>2</td>
+    <td>num,num→num</td>
+  </tr>
+  <tr class="warning">
+    <td>+</td>
+    <td>Concatenate strings</td>
+    <td>L</td>
+    <td>2</td>
+    <td>str,str→str</td>
+  </tr>
+  <tr class="info">
+    <td><<</td>
+    <td>Shift left</td>
+    <td>L</td>
+    <td>2</td>
+    <td>int,int→int</td>
+  </tr>
+  <tr class="info">
+    <td>>></td>
+    <td>Shift right with sign extension</td>
+    <td>L</td>
+    <td>2</td>
+    <td>int,int→int</td>
+  </tr>
+  <tr class="info">
+    <td>>>></td>
+    <td>Shift right with zero extension</td>
+    <td>L</td>
+    <td>2</td>
+    <td>int,int→int</td>
+  </tr>
+  <tr class="warning">
+    <td>< , <= , > , >=</td>
+    <td>Compare in numeric order</td>
+    <td>L</td>
+    <td>2</td>
+    <td>num,num→bool</td>
+  </tr>
+  <tr class="warning">
+    <td>< , <= , > , >=</td>
+    <td>Compare in alphabetic order</td>
+    <td>L</td>
+    <td>2</td>
+    <td>str,str→bool</td>
+  </tr>
+  <tr class="warning">
+    <td>instanceof</td>
+    <td>Test object class</td>
+    <td>L</td>
+    <td>2</td>
+    <td>obj,func→bool</td>
+  </tr>
+  <tr class="warning">
+    <td>in</td>
+    <td>Test whether property exists</td>
+    <td>L</td>
+    <td>2</td>
+    <td>str,obj→bool</td>
+  </tr>
+  </table>
+</div>

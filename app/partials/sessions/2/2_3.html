@@ -1,0 +1,38 @@
+<h4>Declaration Statements</h4>
+The var and function are declaration statements—they declare or define variables and
+functions. These statements define identifiers (variable and function names) that can
+be used elsewhere in your program and assign values to those identifiers. Declaration
+statements don’t do much themselves, but by creating variables and functions they, in
+an important sense, define the meaning of the other statements in your program.
+
+<details open>
+  <summary><strong>var</strong></summary>
+  The var keyword is followed by a comma-separated list of variables to declare; each
+  variable in the list may optionally have an initializer expression that specifies its initial
+  value. For example:
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>var</span> i<span style='color:#406080; '>;</span>                                        <span style='color:#595979; '>// One simple variable</span>
+  <span style='color:#200080; font-weight:bold; '>var</span> j <span style='color:#308080; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#406080; '>;</span>                                    <span style='color:#595979; '>// One var, one value</span>
+  <span style='color:#200080; font-weight:bold; '>var</span> p<span style='color:#308080; '>,</span> q<span style='color:#406080; '>;</span>                                     <span style='color:#595979; '>// Two variables</span>
+  <span style='color:#200080; font-weight:bold; '>var</span> greeting <span style='color:#308080; '>=</span> <span style='color:#800000; '>"</span><span style='color:#1060b6; '>hello</span><span style='color:#800000; '>"</span> <span style='color:#308080; '>+</span> name<span style='color:#406080; '>;</span>                <span style='color:#595979; '>// A complex initializer</span>
+  <span style='color:#200080; font-weight:bold; '>var</span> x <span style='color:#308080; '>=</span> <span style='color:#008000; '>2.34</span><span style='color:#308080; '>,</span> y <span style='color:#308080; '>=</span> <span style='color:#007d45; '>Math</span><span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>cos</span><span style='color:#308080; '>(</span><span style='color:#008000; '>0.75</span><span style='color:#308080; '>)</span><span style='color:#308080; '>,</span> r<span style='color:#406080; '>;</span>          <span style='color:#595979; '>// Many variables</span>
+  <span style='color:#200080; font-weight:bold; '>var</span> x <span style='color:#308080; '>=</span> <span style='color:#008c00; '>2</span><span style='color:#308080; '>,</span> y <span style='color:#308080; '>=</span> x<span style='color:#308080; '>*</span>x<span style='color:#406080; '>;</span>                           <span style='color:#595979; '>// Second var uses the first</span>
+  <span style='color:#200080; font-weight:bold; '>var</span> x <span style='color:#308080; '>=</span> <span style='color:#008c00; '>2</span><span style='color:#308080; '>,</span>                                    <span style='color:#595979; '>// Multiple variables...</span>
+      f <span style='color:#308080; '>=</span> <span style='color:#200080; font-weight:bold; '>function</span><span style='color:#308080; '>(</span>x<span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span> <span style='color:#200080; font-weight:bold; '>return</span> x<span style='color:#308080; '>*</span>x <span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>           <span style='color:#595979; '>// each on its own line</span>
+      y <span style='color:#308080; '>=</span> f<span style='color:#308080; '>(</span>x<span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+</pre>
+  If a var statement appears within the body of a function, it defines local variables,
+  scoped to that function. When var is used in top-level code, it declares global variables,
+  visible throughout the JavaScript program. Global variables are
+  properties of the global object. Unlike other global properties, however, properties
+  created with var cannot be deleted.
+  <hr/>
+  If no initializer is specified for a variable with the var statement, the variable’s initial
+  value is undefined . Variables are defined throughout the scriptor function in which they are declared.
+  Their declaration is “hoisted” up to the startof the script or function. 
+  Initialization, however, occurs at the location of the var statement, and the value of the variable is undefined before that point in the code.
+</details>
+
+<details>
+  <summary><strong>function</strong></summary>
+</details>

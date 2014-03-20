@@ -1,0 +1,86 @@
+<h4>Expressions</h4>
+<ul>
+  <li>
+    <details open>
+        <summary><strong>Primary Expressions</strong></summary>
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#595979; '>// Litrals</span>
+  <span style='color:#008000; '>1.23</span>            <span style='color:#595979; '>// A number literal</span>
+  <span style='color:#800000; '>"</span><span style='color:#1060b6; '>hello</span><span style='color:#800000; '>"</span>         <span style='color:#595979; '>// A string literal</span>
+  <span style='color:#308080; '>/</span>pattern<span style='color:#308080; '>/</span>       <span style='color:#595979; '>// A regular expression literal</span>
+  <span style='color:#595979; '>// Keywords</span>
+  <span style='color:#0f4d75; '>false</span>           <span style='color:#595979; '>// Evaluates to the boolean false value</span>
+  <span style='color:#0f4d75; '>null</span>            <span style='color:#595979; '>// Evaluates to the null value</span>
+  <span style='color:#200080; font-weight:bold; '>this</span>            <span style='color:#595979; '>// Evaluates to the "current" object</span>
+  <span style='color:#595979; '>// variables</span>
+  i               <span style='color:#595979; '>// Evaluates to the value of the variable i.</span>
+  sum             <span style='color:#595979; '>// Evaluates to the value of the variable sum.</span>
+  undefined       <span style='color:#595979; '>// undefined is a global variable, not a keyword like null.</span>
+</pre>
+    </details>
+  </li>
+  
+  <li>
+    <details>
+        <summary><strong>Object and Array Initializers</strong></summary>
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#308080; '>[</span><span style='color:#308080; '>]</span>                                  <span style='color:#595979; '>// An empty array: no expressions inside brackets means no elements</span>
+  <span style='color:#308080; '>[</span><span style='color:#008c00; '>1</span><span style='color:#308080; '>+</span><span style='color:#008c00; '>2</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>3</span><span style='color:#308080; '>+</span><span style='color:#008c00; '>4</span><span style='color:#308080; '>]</span>                           <span style='color:#595979; '>// A 2-element array. First element is 3, second is 7</span>
+  <span style='color:#200080; font-weight:bold; '>var</span> matrix <span style='color:#308080; '>=</span> <span style='color:#308080; '>[</span><span style='color:#308080; '>[</span><span style='color:#008c00; '>1</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>2</span><span style='color:#308080; '>]</span><span style='color:#308080; '>,</span> <span style='color:#308080; '>[</span><span style='color:#008c00; '>3</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>4</span><span style='color:#308080; '>]</span><span style='color:#308080; '>,</span> <span style='color:#308080; '>[</span><span style='color:#008c00; '>5</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>6</span><span style='color:#308080; '>]</span><span style='color:#308080; '>]</span><span style='color:#406080; '>;</span> <span style='color:#595979; '>// 2 dimension array</span>
+  <span style='color:#200080; font-weight:bold; '>var</span> sparseArray <span style='color:#308080; '>=</span> <span style='color:#308080; '>[</span><span style='color:#008c00; '>1</span><span style='color:#308080; '>,</span><span style='color:#308080; '>,</span><span style='color:#308080; '>,</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>5</span><span style='color:#308080; '>]</span><span style='color:#406080; '>;</span>         <span style='color:#595979; '>// spare array with undefined values</span>
+  
+  <span style='color:#200080; font-weight:bold; '>var</span> p <span style='color:#308080; '>=</span> <span style='color:#406080; '>{</span> x<span style='color:#406080; '>:</span><span style='color:#008000; '>2.3</span><span style='color:#308080; '>,</span> y<span style='color:#406080; '>:</span><span style='color:#308080; '>-</span><span style='color:#008000; '>1.2</span> <span style='color:#406080; '>}</span><span style='color:#406080; '>;</span>          <span style='color:#595979; '>// An object with 2 properties</span>
+  <span style='color:#200080; font-weight:bold; '>var</span> q <span style='color:#308080; '>=</span> <span style='color:#406080; '>{</span><span style='color:#406080; '>}</span><span style='color:#406080; '>;</span>                         <span style='color:#595979; '>// An empty object with no properties</span>
+  q<span style='color:#308080; '>.</span>x <span style='color:#308080; '>=</span> <span style='color:#008000; '>2.3</span><span style='color:#406080; '>;</span> q<span style='color:#308080; '>.</span>y <span style='color:#308080; '>=</span> <span style='color:#308080; '>-</span><span style='color:#008000; '>1.2</span><span style='color:#406080; '>;</span>              <span style='color:#595979; '>// Now q has the same properties as p</span>
+  
+  <span style='color:#595979; '>// Nested Objects and nested expresion </span>
+  <span style='color:#200080; font-weight:bold; '>var</span> side <span style='color:#308080; '>=</span> <span style='color:#008c00; '>1</span><span style='color:#406080; '>;</span>
+  <span style='color:#200080; font-weight:bold; '>var</span> square <span style='color:#308080; '>=</span> <span style='color:#406080; '>{</span>
+    <span style='color:#800000; '>"</span><span style='color:#1060b6; '>upperLeft</span><span style='color:#800000; '>"</span> <span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span> x<span style='color:#406080; '>:</span> p<span style='color:#308080; '>.</span>x<span style='color:#308080; '>,</span> y<span style='color:#406080; '>:</span> p<span style='color:#308080; '>.</span>y <span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+    <span style='color:#800000; '>"</span><span style='color:#1060b6; '>lowerRight</span><span style='color:#800000; '>"</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span> x<span style='color:#406080; '>:</span> p<span style='color:#308080; '>.</span>x <span style='color:#308080; '>+</span> side<span style='color:#308080; '>,</span> y<span style='color:#406080; '>:</span> p<span style='color:#308080; '>.</span>y <span style='color:#308080; '>+</span> side<span style='color:#406080; '>}</span>
+  <span style='color:#406080; '>}</span><span style='color:#406080; '>;</span>
+</pre>
+    </details>
+  </li>
+
+  <li>
+    <details>
+        <summary><strong>Function Definition Expressions</strong></summary>
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#595979; '>// This function returns the square of the value passed to it.</span>
+  <span style='color:#200080; font-weight:bold; '>var</span> square <span style='color:#308080; '>=</span> <span style='color:#200080; font-weight:bold; '>function</span><span style='color:#308080; '>(</span>x<span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span> <span style='color:#200080; font-weight:bold; '>return</span> x <span style='color:#308080; '>*</span> x<span style='color:#406080; '>;</span> <span style='color:#406080; '>}</span>
+</pre>
+    </details>
+  </li>
+
+    <li>
+    <details>
+        <summary><strong>Property Access Expressions</strong></summary>
+<pre style='color:#000020;background:#f6f8ff;'>
+  <em>expression <span style='color:#308080; '>.</span> identifier</em>
+  <em>expression <span style='color:#308080; '>[</span> expression <span style='color:#308080; '>]</span></em>
+
+  <span style='color:#200080; font-weight:bold; '>var</span> o <span style='color:#308080; '>=</span> <span style='color:#406080; '>{</span>x<span style='color:#406080; '>:</span><span style='color:#008c00; '>1</span><span style='color:#308080; '>,</span>y<span style='color:#406080; '>:</span><span style='color:#406080; '>{</span>z<span style='color:#406080; '>:</span><span style='color:#008c00; '>3</span><span style='color:#406080; '>}</span><span style='color:#406080; '>}</span><span style='color:#406080; '>;</span>      <span style='color:#595979; '>// example object</span>
+  o<span style='color:#308080; '>.</span>x                         <span style='color:#595979; '>// 1: property x of expression o</span>
+  o<span style='color:#308080; '>.</span>y<span style='color:#308080; '>.</span>z                       <span style='color:#595979; '>// 3: property z of expression o.y</span>
+  o<span style='color:#308080; '>[</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>x</span><span style='color:#800000; '>"</span><span style='color:#308080; '>]</span>                      <span style='color:#595979; '>// 1: property x of object o</span>
+
+  <span style='color:#200080; font-weight:bold; '>var</span> a <span style='color:#308080; '>=</span> <span style='color:#308080; '>[</span>o<span style='color:#308080; '>,</span><span style='color:#008c00; '>4</span><span style='color:#308080; '>,</span><span style='color:#308080; '>[</span><span style='color:#008c00; '>5</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>6</span><span style='color:#308080; '>]</span><span style='color:#308080; '>]</span><span style='color:#406080; '>;</span>        <span style='color:#595979; '>// example array that contains the object</span>
+  a<span style='color:#308080; '>[</span><span style='color:#008c00; '>1</span><span style='color:#308080; '>]</span>                        <span style='color:#595979; '>// 4: element at index 1 of expression a</span>
+  a<span style='color:#308080; '>[</span><span style='color:#008c00; '>2</span><span style='color:#308080; '>]</span><span style='color:#308080; '>[</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>1</span><span style='color:#800000; '>"</span><span style='color:#308080; '>]</span>                   <span style='color:#595979; '>// 6: element at index 1 of expression a[2]</span>
+  a<span style='color:#308080; '>[</span><span style='color:#008c00; '>0</span><span style='color:#308080; '>]</span><span style='color:#308080; '>.</span>x                      <span style='color:#595979; '>// 1: property x of expression a[0]</span>
+
+</pre>
+    </details>
+  </li>
+
+  <li>
+    <details>
+        <summary><strong>Invocation Expressions</strong></summary>
+<pre style='color:#000020;background:#f6f8ff;'>
+  f<span style='color:#308080; '>(</span><span style='color:#008c00; '>0</span><span style='color:#308080; '>)</span>                <span style='color:#595979; '>// f is the function expression; 0 is the argument expression.</span>
+  <span style='color:#007d45; '>Math</span><span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>max</span><span style='color:#308080; '>(</span>x<span style='color:#308080; '>,</span>y<span style='color:#308080; '>,</span>z<span style='color:#308080; '>)</span>     <span style='color:#595979; '>// Math.max is the function; x, y and z are the arguments.</span>
+  a<span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>sort</span><span style='color:#308080; '>(</span><span style='color:#308080; '>)</span>            <span style='color:#595979; '>// a.sort is the function; there are no arguments.</span></pre>
+    </details>
+  </li>
+</ul>
