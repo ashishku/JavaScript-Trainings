@@ -1,0 +1,44 @@
+<h4>Jumps</h4>
+<ul>
+  <li>
+    <strong>Labeled Statements</strong>
+<pre style='color:#000020;background:#f6f8ff;'>
+  mainloop<span style='color:#406080; '>:</span> <span style='color:#200080; font-weight:bold; '>while</span><span style='color:#308080; '>(</span>token <span style='color:#308080; '>!=</span> <span style='color:#0f4d75; '>null</span><span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>
+    <span style='color:#595979; '>// Code omitted...</span>
+    <span style='color:#200080; font-weight:bold; '>continue</span> mainloop<span style='color:#406080; '>;</span> <span style='color:#595979; '>// Jump to the next iteration of the named loop</span>
+    <span style='color:#595979; '>// More code omitted...</span>
+  <span style='color:#406080; '>}</span>
+</pre>
+  </li>
+
+  <li>
+    <strong>break</strong>
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>for</span><span style='color:#308080; '>(</span><span style='color:#200080; font-weight:bold; '>var</span> i <span style='color:#308080; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#406080; '>;</span> i <span style='color:#308080; '>&lt;</span> a<span style='color:#308080; '>.</span>length<span style='color:#406080; '>;</span> i<span style='color:#308080; '>++</span><span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>
+    <span style='color:#200080; font-weight:bold; '>if</span> <span style='color:#308080; '>(</span>a<span style='color:#308080; '>[</span>i<span style='color:#308080; '>]</span> <span style='color:#308080; '>==</span> target<span style='color:#308080; '>)</span> <span style='color:#200080; font-weight:bold; '>break</span><span style='color:#406080; '>;</span>
+  <span style='color:#406080; '>}</span>
+</pre>
+  </li>
+
+  <li>
+    <strong>continue</strong>
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>for</span><span style='color:#308080; '>(</span>i <span style='color:#308080; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#406080; '>;</span> i <span style='color:#308080; '>&lt;</span> data<span style='color:#308080; '>.</span>length<span style='color:#406080; '>;</span> i<span style='color:#308080; '>++</span><span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>
+    <span style='color:#200080; font-weight:bold; '>if</span> <span style='color:#308080; '>(</span><span style='color:#308080; '>!</span>data<span style='color:#308080; '>[</span>i<span style='color:#308080; '>]</span><span style='color:#308080; '>)</span> <span style='color:#200080; font-weight:bold; '>continue</span><span style='color:#406080; '>;</span> <span style='color:#595979; '>// Can't proceed with undefined data</span>
+    total <span style='color:#308080; '>+=</span> data<span style='color:#308080; '>[</span>i<span style='color:#308080; '>]</span><span style='color:#406080; '>;</span>
+  <span style='color:#406080; '>}</span>
+</pre>
+  </li>
+
+  <li>
+    <strong>return</strong>
+  </li>
+
+  <li>
+    <strong>throw</strong>
+  </li>
+
+  <li>
+    <strong>try/catch/finally</strong>
+  </li>
+</ul>

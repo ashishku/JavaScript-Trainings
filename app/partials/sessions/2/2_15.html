@@ -1,0 +1,52 @@
+<h4>Miscellaneous</h4>
+
+<details open>
+  <summary><strong>with</strong></summary>
+  <a href="http://jsbin.com/ashishJSWitth/1/embed?js,console"><em>http://jsbin.com/ashishJSWitth/1/embed?js,console</em></a>
+  <iframe src="http://jsbin.com/ashishJSWitth/1/embed?js,console" style="border: 1px solid rgb(170, 170, 170); width: 99%; height:210px;"></iframe>
+</details>
+
+<details open>
+  <summary><strong>debugger</strong></summary>
+  added in ECMAScript 5. Acts as a breakpoint.
+</details>
+
+<details>
+  <summary><strong>"use strict"</strong></summary>
+  <ul>
+    <li>
+      The with statement is not allowed in strict mode.
+    </li>
+    <li>
+      In strict mode, all variables must be declared: a ReferenceError is thrown if you assign a value to an identifier that is not a declared variable, function, function parameter, catch clause parameter, or property of the global object. (In non-strict mode, this implicitly declares a global variable by adding a new property to the global object.)
+    </li>
+    <li>
+      In strict mode, functions invoked as functions (rather than as methods) have a this value of undefined. (In non-strict mode, functions invoked as functions are always passed the global object as their this value.) This difference can be used to determine whether an implementation supports strict mode:
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>var</span> hasStrictMode <span style='color:#308080; '>=</span> <span style='color:#308080; '>(</span><span style='color:#200080; font-weight:bold; '>function</span><span style='color:#308080; '>(</span><span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span> <span style='color:#800000; '>"</span><span style='color:#1060b6; '>use strict</span><span style='color:#800000; '>"</span><span style='color:#406080; '>;</span> <span style='color:#200080; font-weight:bold; '>return</span> <span style='color:#200080; font-weight:bold; '>this</span><span style='color:#308080; '>===</span>undefined<span style='color:#406080; '>}</span><span style='color:#308080; '>(</span><span style='color:#308080; '>)</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+</pre>
+      Also, in strict mode, when a function is invoked with call() or apply(), the this value is exactly the value passed as the first argument to call() or apply(). (In nonstrict mode, null and undefined values are replaced with the global object and non-object values are converted to objects.)
+    </li>
+    <li>
+      In strict mode, assignments to nonwritable properties and attempts to create new properties on nonextensible objects throw a TypeError. (In non-strict mode, these attempts fail silently.)
+    </li>
+    <li>
+      In strict mode, code passed to eval() cannot declare variables or define functions in the caller&rsquo;s scope as it can in non-strict mode. Instead, variable and function definitions live in a new scope created for the eval(). This scope is discarded when the eval() returns.
+    </li>
+    <li>
+      In strict mode, the arguments object in a function holds a static copy of the values passed to the function. In non-strict mode, the arguments object has &ldquo;magical&rdquo; behavior in which elements of the array and named function parameters both refer to the same value.
+    </li>
+    <li>
+      In strict mode, a SyntaxError is thrown if the delete operator is followed by an unqualified identifier such as a variable, function, or function parameter. (In nonstrict mode, such a delete expression does nothing and evaluates to false.)
+    </li>
+    <li>
+      In strict mode, an attempt to delete a nonconfigurable property throws a TypeError. (In non-strict mode, the attempt fails and the delete expression evaluates to false.)
+    </li>
+    <li>
+      In strict mode, it is a syntax error for an object literal to define two or more properties by the same name. (In non-strict mode, no error occurs.)
+    </li>
+    <li>
+      In strict mode, it is a syntax error for a function declaration to have two or more parameters with the same name. (In non-strict mode, no error occurs.)
+    </li>
+  </ul>
+</details>

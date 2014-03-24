@@ -1,0 +1,62 @@
+<h4>Objects</h4>
+JavaScript objects are dynamic—properties can usually be added and deleted.
+<br/>Any value in JavaScript that is not a string, a number, true , false , null , or undefined is an object. And even though strings, numbers, and booleans are not objects, they behave like immutable objects.
+<br/>Objects are mutable and are manipulated by reference rather than by value. If the variable x refers to an object, and the code var y = x; is executed, the variable y holds a reference to the same object, not a copy of that object. Any modifications made
+to the object through the variable y are also visible through the variable x .
+
+<hr />A property has a name and a value. A property name may be any string, including the empty string, but no object may have two properties with the same name. The value may be any JavaScript value, or (in ECMAScript 5) it may be a getter or a setter function
+(or both). In addition to its name and value, each property has associated values that we’ll call property attributes:
+
+<ul>
+  <li>
+    The writable attribute specifies whether the value of the property can be set.
+  </li>
+
+  <li>
+    The enumerable attribute specifies whether the property name is returned by a for/in loop.
+  </li>
+
+  <li>
+    The configurable attribute specifies whether the property can be deleted and whether its attributes can be altered.
+  </li>
+</ul>
+
+Prior to ECMAScript 5, all properties in objects created by your code are writable, enumerable, and configurable. In ECMAScript 5, you can configure the attributes of your properties.
+
+<ul>
+  <li>
+    An object’s prototype is a reference to another object from which properties are inherited.
+  </li>
+
+  <li>
+    An object’s class is a string that categorizes the type of an object.
+  </li>
+
+  <li>
+    An object’s extensible flag specifies (in ECMAScript 5) whether new properties may be added to the object.
+  </li>
+</ul>
+
+<hr />
+<ul>
+  <li>
+    A <span class="label label-info">native object</span> is an object or class of objects defined by the ECMAScript specification. Arrays, functions, dates, and regular expressions (for example) are native objects.
+  </li>
+
+  <li>
+    A <span class="label label-info">host object</span> is an object defined by the host environment (such as a web browser) within which the JavaScript interpreter is embedded. The HTMLElement objects that represent the structure of a web page in client-side JavaScript
+    are host objects. Host objects may also be native objects, as when the host environment defines methods that are normal JavaScript Function objects.
+  </li>
+
+  <li>
+    A <span class="label label-info">user-defined</span> object is any object created by the execution of JavaScript code.
+  </li>
+
+  <li>
+    An <span class="label label-info">own property</span> is a property defined directly on an object.
+  </li>
+
+  <li>
+    An <span class="label label-info">inherited property</span> is a property defined by an object’s prototype object.
+  </li>
+</ul>

@@ -19,7 +19,7 @@ define(['jquery', 'underscore', 'backbone', 'text!partials/indexView.html'], fun
                         { url: '#side/session2_5', title: 'Conditionals' },
                         { url: '#side/session2_10', title: 'Loops' },
                         { url: '#side/session2_12', title: 'Jumps' },
-                        { url: '#side/session2_11', title: 'Miscellaneous Statements' },
+                        { url: '#side/session2_15', title: 'Miscellaneous Statements' },
                     ]},
                     { url: '#side/session3', title: 'Inbuild Objects', topics:[
                         { url: '#side/session3_1', title: 'Objects' },

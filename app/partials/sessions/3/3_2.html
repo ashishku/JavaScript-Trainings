@@ -1,0 +1,18 @@
+<div class="container">
+  <h4>Prototypes</h4>
+  <p>
+    Every JavaScript object has a second JavaScript object (or null, but this is rare) associated with it. This second object is known as a prototype, and the first object inherits properties from the prototype.
+    <br />All objects created by object literals have the same prototype object, and we can refer to this prototype object in JavaScript code as Object.prototype.
+    <br />Objects created using the new keyword and a constructor invocation use the value of the prototype property of the constructor function as their prototype. So the object created by new Object() inherits from Object.prototype just as the object created
+    by {} does.
+    <br />Similarly, the object created by new Array() uses Array.prototype as its prototype, and the object created by new Date() uses Date.prototype as its prototype.
+  </p>
+  <hr />
+  <p>
+    Object.prototype is one of the rare objects that has no prototype: it does not inherit any properties.
+    <br />Other prototype objects are normal objects that do have a prototype.
+    <br />All of the built-in constructors (and most user-defined constructors) have a prototype
+    that inherits from Object.prototype . For example, Date.prototype inherits properties from Object.prototype , so a Date object created by new Date() inherits properties from both Date.prototype and Object.prototype . This linked series of prototype
+    objects is known as a prototype chain.
+  </p>
+</div>
