@@ -16,9 +16,10 @@ define(['jquery', 'underscore', 'backbone', 'text!partials/indexView.html'], fun
                         { url: '#side/session2_1', title: 'Expression Statements' },
                         { url: '#side/session2_2', title: 'Compound and Empty Statements' },
                         { url: '#side/session2_3', title: 'Declaration Statements' },
-                        { url: '#side/session2_4', title: 'Conditionals' },
-                        { url: '#side/session2_5', title: 'Jumps' },
-                        { url: '#side/session2_6', title: 'Miscellaneous Statements' },
+                        { url: '#side/session2_5', title: 'Conditionals' },
+                        { url: '#side/session2_10', title: 'Loops' },
+                        { url: '#side/session2_12', title: 'Jumps' },
+                        { url: '#side/session2_11', title: 'Miscellaneous Statements' },
                     ]},
                     { url: '#side/session3', title: 'Inbuild Objects', topics:[
                         { url: '#side/session3_1', title: 'Objects' },
