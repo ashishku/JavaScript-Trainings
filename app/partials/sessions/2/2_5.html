@@ -1,0 +1,40 @@
+<h4>Conditional Statements</h4>
+Conditional statements execute or skip other statements depending on the value of a
+specified expression. These statements are the decision points of your code, and they
+are also sometimes known as “branches.”
+
+<ul>
+  <li>
+    <strong>if</strong>
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>if</span> <span style='color:#308080; '>(</span>expression<span style='color:#308080; '>)</span>
+    statement
+
+  <span style='color:#200080; font-weight:bold; '>if</span> <span style='color:#308080; '>(</span>username <span style='color:#308080; '>==</span> <span style='color:#0f4d75; '>null</span><span style='color:#308080; '>)</span>         <span style='color:#595979; '>// If username is null or undefined,</span>
+    username <span style='color:#308080; '>=</span> <span style='color:#800000; '>"</span><span style='color:#1060b6; '>Ashish</span><span style='color:#800000; '>"</span><span style='color:#406080; '>;</span>        <span style='color:#595979; '>// define it</span>
+
+  <span style='color:#595979; '>// If username is null, undefined, false, 0, "", or NaN, give it a new value</span>
+  <span style='color:#200080; font-weight:bold; '>if</span> <span style='color:#308080; '>(</span><span style='color:#308080; '>!</span>username<span style='color:#308080; '>)</span> username <span style='color:#308080; '>=</span> <span style='color:#800000; '>"</span><span style='color:#1060b6; '>Ashish</span><span style='color:#800000; '>"</span><span style='color:#406080; '>;</span>
+</pre>
+  </li>
+
+  <li>
+    <strong>if else</strong>
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>if</span> <span style='color:#308080; '>(</span>expression<span style='color:#308080; '>)</span>
+    statement1
+  <span style='color:#200080; font-weight:bold; '>else</span>
+    statement2
+  
+  <span style='color:#200080; font-weight:bold; '>if</span> <span style='color:#308080; '>(</span>n <span style='color:#308080; '>==</span> <span style='color:#008c00; '>1</span><span style='color:#308080; '>)</span>
+    console<span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>log</span><span style='color:#308080; '>(</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>You have 1 new message.</span><span style='color:#800000; '>"</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+  <span style='color:#200080; font-weight:bold; '>else</span>
+    console<span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>log</span><span style='color:#308080; '>(</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>You have </span><span style='color:#800000; '>"</span> <span style='color:#308080; '>+</span> n <span style='color:#308080; '>+</span> <span style='color:#800000; '>"</span><span style='color:#1060b6; '> new messages.</span><span style='color:#800000; '>"</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+</pre>
+  </li>
+  
+  <li>
+    <strong>else if</strong><br/>
+    There is no else if statement in JavaScript. It is rather a clever combination of if statement in place of a else statement.
+  </li>
+</ul>

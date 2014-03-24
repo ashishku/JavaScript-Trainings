@@ -1,0 +1,31 @@
+<ul>
+  <li>
+    <strong>switch</strong><br/>
+    When a switch executes, it computes the value of expression and then looks for a case label
+    whose expression evaluates to the same value (where sameness is determined by the === operator).
+    If it finds one, it starts executing the block of code at the statement labeled by the case.
+    If it does not find a case with a matching value, it looks for a statement labeled default:.
+    If there is no default: label, the switch statement skips the block of code altogether.
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>switch</span><span style='color:#308080; '>(</span>expression<span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>
+    statements
+  <span style='color:#406080; '>}</span>
+  
+  <span style='color:#200080; font-weight:bold; '>switch</span><span style='color:#308080; '>(</span>n<span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>
+    <span style='color:#200080; font-weight:bold; '>case</span> <span style='color:#008c00; '>1</span><span style='color:#406080; '>:</span>                       <span style='color:#595979; '>// Start here if n == 1</span>
+      <span style='color:#595979; '>// Execute code block #1.</span>
+      <span style='color:#200080; font-weight:bold; '>break</span><span style='color:#406080; '>;</span>                      <span style='color:#595979; '>// Stop here</span>
+    <span style='color:#200080; font-weight:bold; '>case</span> <span style='color:#008c00; '>2</span><span style='color:#406080; '>:</span>                       <span style='color:#595979; '>// Start here if n == 2</span>
+      <span style='color:#595979; '>// Execute code block #2.</span>
+      <span style='color:#200080; font-weight:bold; '>break</span><span style='color:#406080; '>;</span>                      <span style='color:#595979; '>// Stop here</span>
+    default<span style='color:#406080; '>:</span>                      <span style='color:#595979; '>// If all else fails...</span>
+      <span style='color:#595979; '>// Execute code block #3.</span>
+      <span style='color:#200080; font-weight:bold; '>break</span><span style='color:#406080; '>;</span>                      <span style='color:#595979; '>// Stop here</span>
+  <span style='color:#406080; '>}</span>
+</pre>
+    Couple of point to remember with switch<br/>
+    - Note that in the examples above, the default: label appears at the end of the switch body, following all the case labels. 
+    This is a logical and common place for it, but it can actually appear anywhere within the body of the statement.<br/>
+    - When using switch inside a function, you may use a return statement instead of a break statement.
+  </li>
+</ul>

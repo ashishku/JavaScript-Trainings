@@ -1,0 +1,49 @@
+<h4>Loops</h4>
+<ul>
+  <li>
+    <strong>while</strong>
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>while</span> <span style='color:#308080; '>(</span>expression<span style='color:#308080; '>)</span>
+    statement
+</pre>
+  </li>
+
+  <li>
+    <strong>do while</strong>
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>do</span>
+    statement
+  <span style='color:#200080; font-weight:bold; '>while</span> <span style='color:#308080; '>(</span>expression<span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+</pre>
+  </li>
+
+  <li>
+    <strong>for</strong>
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>for</span><span style='color:#308080; '>(</span>initialize <span style='color:#406080; '>;</span> <span style='color:#200080; font-weight:bold; '>test</span> <span style='color:#406080; '>;</span> increment<span style='color:#308080; '>)</span>
+    statement
+  
+  <span style='color:#595979; '>// Same as</span>
+  initialize<span style='color:#406080; '>;</span>
+  <span style='color:#200080; font-weight:bold; '>while</span><span style='color:#308080; '>(</span><span style='color:#200080; font-weight:bold; '>test</span><span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>
+    statement
+    increment<span style='color:#406080; '>;</span>
+  <span style='color:#406080; '>}</span>
+</pre>
+  </li>
+
+  <li>
+    <strong>for in</strong>
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>for</span> <span style='color:#308080; '>(</span>variable <span style='color:#200080; font-weight:bold; '>in</span> object<span style='color:#308080; '>)</span>
+    statement
+</pre>
+    variable typically names a variable, but it may be any expression that evaluates to an
+    lvalue or a var statement that declares a single variable. it must be something
+    suitable as the left side of an assignment expression. object is an expression that evaluates to an object.<br />
+    The for/in loop does not actually enumerate all properties of an object, only the enumerable properties. 
+    The various built-in methods defined by core JavaScript are not enumerable.for example, toString() method. <br/>
+    If the body of a for/in loop deletes a property that has not yet been enumerated, that property will not be enumerated.
+    If the body of the loop defines new properties on the object, those properties will generally not be enumerated.
+  </li>
+</ul>
