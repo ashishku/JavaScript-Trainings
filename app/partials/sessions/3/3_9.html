@@ -1,0 +1,49 @@
+<div class="container">
+  <strong>Property Attributes</strong>
+  <ul>
+    <li>
+      Object.getOwnPropertyDescriptor()
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#595979; '>// Returns {value: 1, writable:true, enumerable:true, configurable:true}</span>
+  <span style='color:#007d45; '>Object</span><span style='color:#308080; '>.</span>getOwnPropertyDescriptor<span style='color:#308080; '>(</span><span style='color:#406080; '>{</span>x<span style='color:#406080; '>:</span><span style='color:#008c00; '>1</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>"</span><span style='color:#1060b6; '>x</span><span style='color:#800000; '>"</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+  <span style='color:#595979; '>// Now query the inr property of the previous example.</span>
+  <span style='color:#595979; '>// Returns { get: /*func*/, set:undefined, enumerable:true, configurable:true}</span>
+  <span style='color:#007d45; '>Object</span><span style='color:#308080; '>.</span>getOwnPropertyDescriptor<span style='color:#308080; '>(</span>objet_pre_exa<span style='color:#308080; '>,</span> <span style='color:#800000; '>"</span><span style='color:#1060b6; '>inr</span><span style='color:#800000; '>"</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+  <span style='color:#595979; '>// Returns undefined for inherited properties and properties that don't exist.</span>
+  <span style='color:#007d45; '>Object</span><span style='color:#308080; '>.</span>getOwnPropertyDescriptor<span style='color:#308080; '>(</span><span style='color:#406080; '>{</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>"</span><span style='color:#1060b6; '>x</span><span style='color:#800000; '>"</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+  <span style='color:#595979; '>// undefined, no such prop</span>
+  <span style='color:#007d45; '>Object</span><span style='color:#308080; '>.</span>getOwnPropertyDescriptor<span style='color:#308080; '>(</span><span style='color:#406080; '>{</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>"</span><span style='color:#1060b6; '>toString</span><span style='color:#800000; '>"</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span> <span style='color:#595979; '>// undefined, inherited</span>
+</pre>
+    </li>
+
+    <li>
+      Object.defineProperty()
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>var</span> o <span style='color:#308080; '>=</span> <span style='color:#406080; '>{</span><span style='color:#406080; '>}</span><span style='color:#406080; '>;</span> <span style='color:#595979; '>// Start with no properties at all</span>
+
+  <span style='color:#595979; '>// Add a nonenumerable data property x with value 1.</span>
+  <span style='color:#007d45; '>Object</span><span style='color:#308080; '>.</span>defineProperty<span style='color:#308080; '>(</span>o<span style='color:#308080; '>,</span> <span style='color:#800000; '>"</span><span style='color:#1060b6; '>x</span><span style='color:#800000; '>"</span><span style='color:#308080; '>,</span> <span style='color:#406080; '>{</span> 
+    value <span style='color:#406080; '>:</span> <span style='color:#008c00; '>1</span><span style='color:#308080; '>,</span>
+    writable<span style='color:#406080; '>:</span> <span style='color:#0f4d75; '>true</span><span style='color:#308080; '>,</span>
+    enumerable<span style='color:#406080; '>:</span> <span style='color:#0f4d75; '>false</span><span style='color:#308080; '>,</span>
+    configurable<span style='color:#406080; '>:</span> <span style='color:#0f4d75; '>true</span>
+  <span style='color:#406080; '>}</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+</pre>
+    </li>
+
+    <li>
+      Object.defineProperties()
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>var</span> p <span style='color:#308080; '>=</span> <span style='color:#007d45; '>Object</span><span style='color:#308080; '>.</span>defineProperties<span style='color:#308080; '>(</span><span style='color:#406080; '>{</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span> <span style='color:#406080; '>{</span>
+    x<span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span> value<span style='color:#406080; '>:</span> <span style='color:#008c00; '>1</span><span style='color:#308080; '>,</span> writable<span style='color:#406080; '>:</span> <span style='color:#0f4d75; '>true</span><span style='color:#308080; '>,</span> enumerable<span style='color:#406080; '>:</span><span style='color:#0f4d75; '>true</span><span style='color:#308080; '>,</span> configurable<span style='color:#406080; '>:</span><span style='color:#0f4d75; '>true</span> <span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+    y<span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span> value<span style='color:#406080; '>:</span> <span style='color:#008c00; '>1</span><span style='color:#308080; '>,</span> writable<span style='color:#406080; '>:</span> <span style='color:#0f4d75; '>true</span><span style='color:#308080; '>,</span> enumerable<span style='color:#406080; '>:</span><span style='color:#0f4d75; '>true</span><span style='color:#308080; '>,</span> configurable<span style='color:#406080; '>:</span><span style='color:#0f4d75; '>true</span> <span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+    r<span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span>
+      get<span style='color:#406080; '>:</span> <span style='color:#200080; font-weight:bold; '>function</span><span style='color:#308080; '>(</span><span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span> <span style='color:#200080; font-weight:bold; '>return</span> <span style='color:#007d45; '>Math</span><span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>sqrt</span><span style='color:#308080; '>(</span><span style='color:#200080; font-weight:bold; '>this</span><span style='color:#308080; '>.</span>x<span style='color:#308080; '>*</span><span style='color:#200080; font-weight:bold; '>this</span><span style='color:#308080; '>.</span>x <span style='color:#308080; '>+</span> <span style='color:#200080; font-weight:bold; '>this</span><span style='color:#308080; '>.</span>y<span style='color:#308080; '>*</span><span style='color:#200080; font-weight:bold; '>this</span><span style='color:#308080; '>.</span>y<span style='color:#308080; '>)</span> <span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+      enumerable<span style='color:#406080; '>:</span><span style='color:#0f4d75; '>true</span><span style='color:#308080; '>,</span>
+      configurable<span style='color:#406080; '>:</span><span style='color:#0f4d75; '>true</span>
+    <span style='color:#406080; '>}</span>
+  <span style='color:#406080; '>}</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+</pre>
+    </li>
+  </ul>
+</div>
