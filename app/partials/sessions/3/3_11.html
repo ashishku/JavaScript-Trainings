@@ -40,19 +40,15 @@ these are not affected and can still be invoked by assignment to the property.)
     <li>JSON.stringify()</li>
     <li>JSON.parse()</li>
   </ul>
-  JSON syntax is a subset of JavaScript syntax, and it cannot represent all JavaScript
-values. Objects, arrays, strings, finite numbers, true , false , and null are supported and
+ Objects, arrays, strings, finite numbers, true , false , and null are supported and
 can be serialized and restored. NaN , Infinity , and -Infinity are serialized to null . Date
 objects are serialized to ISO-formatted date strings (see the Date.toJSON() function),
 but JSON.parse() leaves these in string form and does not restore the original Date
 object. Function, RegExp, and Error objects and the undefined value cannot be serial-
 ized or restored. JSON.stringify() serializes only the enumerable own properties of an
-object. If a property value cannot be serialized, that property is simply omitted from
-the stringified output. Both JSON.stringify() and JSON.parse() accept optional second
+object. Both JSON.stringify() and JSON.parse() accept optional second
 arguments that can be used to customize the serialization and/or restoration process
-by specifying a list of properties to be serialized, for example, or by converting certain
-values during the serialization or stringification process. Complete documentation for
-these functions is in the reference section.
+by specifying a list of properties to be serialized.
   <hr />
   <ul>
     <li>toString()</li>

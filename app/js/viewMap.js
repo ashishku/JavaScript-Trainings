@@ -50,19 +50,24 @@ define({
         ]
     }),
     'session1_1' : genrateHtmlSessionDetails   ({sid:1, ssid: '1', previous: 'session1'}),
+    ///////////////////////////////////////////////////////////////
     'session1_2' : genrateHtmlSessionDetails   ({sid:1, ssid: '2'}),
     'session1_3' : genrateHtmlSessionDetails   ({sid:1, ssid: '3'}),
+    ///////////////////////////////////////////////////////////////
     'session1_4' : genrateHtmlSessionDetails   ({sid:1, ssid: '4'}),
     'session1_5' : genrateHtmlSessionDetails   ({sid:1, ssid: '5'}),
     'session1_6' : genrateHtmlSessionDetails   ({sid:1, ssid: '6'}),
     'session1_7' : genrateJsBinSessionDetails  ({sid:1, ssid: '7', url: '//jsbin.com/ashishJS/2/embed?js,console'}),
+    ///////////////////////////////////////////////////////////////
     'session1_8' : genrateHtmlSessionDetails   ({sid:1, ssid: '8'}),
+    ///////////////////////////////////////////////////////////////
     'session1_9' : genrateHtmlSessionDetails   ({sid:1, ssid: '9'}),
     'session1_10': genrateHtmlSessionDetails   ({sid:1, ssid: '10'}),
     'session1_11': genrateHtmlSessionDetails   ({sid:1, ssid: '11'}),
     'session1_12': genrateHtmlSessionDetails   ({sid:1, ssid: '12'}),
     'session1_13': genrateHtmlSessionDetails   ({sid:1, ssid: '13'}),
     'session1_14': genrateHtmlSessionDetails   ({sid:1, ssid: '14'}),
+    ///////////////////////////////////////////////////////////////
     'session1_15': genrateHtmlSessionDetails   ({sid:1, ssid: '15'}),
     'session1_16': genrateHtmlSessionDetails   ({sid:1, ssid: '16', next: 'session2'}),
 
@@ -81,19 +86,25 @@ define({
         ]
     }),
     'session2_1'  : genrateHtmlSessionDetails   ({sid:2, ssid: '1', previous: 'session2'}),
+    ///////////////////////////////////////////////////////////////
     'session2_2'  : genrateHtmlSessionDetails   ({sid:2, ssid: '2'}),
+    ///////////////////////////////////////////////////////////////
     'session2_3'  : genrateHtmlSessionDetails   ({sid:2, ssid: '3'}),
     'session2_4'  : genrateJsBinSessionDetails  ({sid:2, ssid: '4', url: '//jsbin.com/ashishJSVariables/2/embed?js'}),
+    ///////////////////////////////////////////////////////////////
     'session2_5'  : genrateHtmlSessionDetails   ({sid:2, ssid: '5'}),
     'session2_6'  : genrateJsBinSessionDetails  ({sid:2, ssid: '6', url: '//jsbin.com/ashishJSIfElse/1/embed?js'}),
     'session2_7'  : genrateJsBinSessionDetails  ({sid:2, ssid: '7', url: '//jsbin.com/ashishJSElseIf/3/embed?js'}),
     'session2_8'  : genrateHtmlSessionDetails   ({sid:2, ssid: '8'}),
     'session2_9'  : genrateJsBinSessionDetails  ({sid:2, ssid: '9', url: '//jsbin.com/ashishJSSwitch/4/embed?js'}),
+    ///////////////////////////////////////////////////////////////
     'session2_10' : genrateHtmlSessionDetails   ({sid:2, ssid: '10'}),
     'session2_11' : genrateJsBinSessionDetails  ({sid:2, ssid: '11', url: '//jsbin.com/ashishJSForIn/2/embed?js'}),
+    ///////////////////////////////////////////////////////////////
     'session2_12' : genrateHtmlSessionDetails   ({sid:2, ssid: '12'}),
     'session2_13' : genrateJsBinSessionDetails  ({sid:2, ssid: '13', url: '//jsbin.com/ashishJSLabelBreak/1/embed?js'}),
     'session2_14' : genrateJsBinSessionDetails  ({sid:2, ssid: '14', url: '//jsbin.com/ashishJSTryCatchFinaly/2/embed?js'}),
+    ///////////////////////////////////////////////////////////////
     'session2_15' : genrateHtmlSessionDetails   ({sid:2, ssid: '15', next: 'session3'}),
 
     'session3'   : genrateSummarySessionDetails({
@@ -103,8 +114,8 @@ define({
         subSessions: [
           { url: '#side/session3_1', title: 'Objects' },
           { url: '#side/session3_12', title: 'Arrays' },
-          { url: '#side/session3_3', title: 'Functions' },
-          { url: '#side/session3_5', title: 'Regex' },
+          { url: '#side/session3_16', title: 'Functions' },
+          { url: '#side/session3_16', title: 'Regex' },
           { url: '#side/session3_4', title: 'Date' }
         ]
     }),
@@ -112,14 +123,22 @@ define({
     'session3_2'  : genrateHtmlSessionDetails ({sid:3, ssid: '2'}),
     'session3_3'  : genrateHtmlSessionDetails ({sid:3, ssid: '3'}),
     'session3_4'  : genrateJsBinSessionDetails({sid:3, ssid: '4', url: '//jsbin.com/javascript1/7/embed?js,console'}),
-    'session3_5'  : genrateJsBinSessionDetails({sid:3, ssid: '5', url: '//jsbin.com/javascript2/2/embed?js,console'}),
-    'session3_6'  : genrateJsBinSessionDetails({sid:3, ssid: '6', url: '//jsbin.com/javascript3/2/embed?js,console'}),
-    'session3_7'  : genrateHtmlSessionDetails ({sid:3, ssid: '7'}),
+    'session3_5'  : genrateJsBinSessionDetails({sid:3, ssid: '5', url: '//jsbin.com/javascript2/2/embed?js,console', next: 'session3_7'}),
+    //'session3_6'  : genrateJsBinSessionDetails({sid:3, ssid: '6', url: '//jsbin.com/javascript3/2/embed?js,console'}),
+    'session3_7'  : genrateHtmlSessionDetails ({sid:3, ssid: '7',previous: 'session3_5'}),
     'session3_8'  : genrateJsBinSessionDetails({sid:3, ssid: '8', url: '//jsbin.com/ashishJSGetterSetter/1/embed?js,console'}),
     'session3_9'  : genrateHtmlSessionDetails ({sid:3, ssid: '9'}),
     'session3_10' : genrateJsBinSessionDetails({sid:3, ssid: '10', url: '//jsbin.com/javascript5/6/embed?js,console'}),
     'session3_11' : genrateHtmlSessionDetails ({sid:3, ssid: '11'}),
+    ///////////////////////////////////////////////////////////////
     'session3_12' : genrateHtmlSessionDetails ({sid:3, ssid: '12'}),
-    'session3_13' : genrateJsBinSessionDetails({sid:3, ssid: '13', url: '//jsbin.com/javascript5/6/embed?js,console'}),
+    'session3_13' : genrateHtmlSessionDetails ({sid:3, ssid: '13'}),
     'session3_14' : genrateHtmlSessionDetails ({sid:3, ssid: '14'}),
+    'session3_15' : genrateJsBinSessionDetails({sid:3, ssid: '15', url: '//jsbin.com/ashishJSArrays/6/embed?js,console'}),
+    ///////////////////////////////////////////////////////////////
+    'session3_16' : genrateHtmlSessionDetails ({sid:3, ssid: '16'}),
+    'session3_17' : genrateHtmlSessionDetails ({sid:3, ssid: '17'}),
+    'session3_18' : genrateJsBinSessionDetails({sid:3, ssid: '18', url: '//jsbin.com/ashishJSFunctions/8/embed?js,console'}),
+    'session3_19' : genrateHtmlSessionDetails ({sid:3, ssid: '19'}),
+    'session3_20' : genrateJsBinSessionDetails({sid:3, ssid: '20', url: '//jsbin.com/ashishJSModules/4/embed?js,console'}),
 });

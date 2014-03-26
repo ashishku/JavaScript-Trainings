@@ -1,0 +1,23 @@
+<div class="container">
+  <strong>Functions</strong>
+  <pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>var</span> f <span style='color:#308080; '>=</span> <span style='color:#200080; font-weight:bold; '>function</span><span style='color:#308080; '>(</span>x<span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span> <span style='color:#200080; font-weight:bold; '>return</span> x<span style='color:#308080; '>+</span><span style='color:#008c00; '>1</span><span style='color:#406080; '>;</span> <span style='color:#406080; '>}</span>   <span style='color:#595979; '>// Expression assigned to a variable</span>
+  <span style='color:#200080; font-weight:bold; '>function</span> f<span style='color:#308080; '>(</span>x<span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span> <span style='color:#200080; font-weight:bold; '>return</span> x<span style='color:#308080; '>+</span><span style='color:#008c00; '>1</span><span style='color:#406080; '>;</span> <span style='color:#406080; '>}</span>         <span style='color:#595979; '>// Statement includes variable name</span>
+</pre>
+  Function declaration statements are “hoisted” to the top of the enclosing script or the enclosing function, so that functions declared in this way may be invoked from code that appears before they are defined. This is not true for functions defined as
+  expressions, however: in order to invoke a function, you must be able to refer to it, and you can’t refer to a function defined as an expression until it is assigned to a variable.
+  <br />If a function does not contain a return statement, it simply executes each statement in the function body and returns the undefined value to the caller.
+  <hr/>
+  <strong>Invoking Functions</strong>
+  <ul>
+    <li>as functions</li>
+    <li>as methods
+      <ul>
+        <li>Method Chaining</li>
+      </ul>
+    </li>
+    <li>as constructors</li>
+    <li>indirectly through their call() and apply() methods</li>
+  </ul>
+
+</div>
