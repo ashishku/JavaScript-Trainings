@@ -140,5 +140,8 @@ define({
     'session3_17' : genrateHtmlSessionDetails ({sid:3, ssid: '17'}),
     'session3_18' : genrateJsBinSessionDetails({sid:3, ssid: '18', url: '//jsbin.com/ashishJSFunctions/8/embed?js,console'}),
     'session3_19' : genrateHtmlSessionDetails ({sid:3, ssid: '19'}),
-    'session3_20' : genrateJsBinSessionDetails({sid:3, ssid: '20', url: '//jsbin.com/ashishJSModules/4/embed?js,console'}),
+    'session3_20' : genrateJsBinSessionDetails({sid:3, ssid: '20', url: '//jsbin.com/ashishJSModules/7/embed?js,console'}),
+    'session3_21' : genrateHtmlSessionDetails ({sid:3, ssid: '21'}),
+    'session3_22' : genrateHtmlSessionDetails ({sid:3, ssid: '22'}),
+    'session3_23' : genrateJsBinSessionDetails({sid:3, ssid: '23', url: '//jsbin.com/ashishJSModules/7/embed?js,console'}),
 });

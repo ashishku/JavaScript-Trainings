@@ -24,7 +24,7 @@ define(['jquery', 'underscore', 'backbone', 'text!partials/indexView.html'], fun
                     { url: '#side/session3', title: 'Inbuild Objects', topics:[
                         { url: '#side/session3_1', title: 'Objects' },
                         { url: '#side/session3_12', title: 'Arrays' },
-                        { url: '#side/session3_3', title: 'Functions' },
+                        { url: '#side/session3_16', title: 'Functions' },
                         { url: '#side/session3_4', title: 'Regex' },
                         { url: '#side/session3_5', title: 'Date' }
                     ]},
