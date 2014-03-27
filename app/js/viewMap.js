@@ -160,7 +160,7 @@ define({
           { url: '#side/session4_1', title: 'Inheritance' },
         ]
     }),
-    'session4_1'  : genrateJsBinSessionDetails({sid:4, ssid: '1', url: '//jsbin.com/javascript3/5/embed?js,console'}),
+    'session4_1'  : genrateJsBinSessionDetails({sid:4, ssid: '1', url: '//jsbin.com/javascript3/5/embed?js,console', previous: 'session4'}),
     'session4_2'  : genrateJsBinSessionDetails({sid:4, ssid: '2', url: '//jsbin.com/javascript5/10/embed?js,console'}),
     'session4_3'  : genrateJsBinSessionDetails({sid:4, ssid: '3', url: '//jsbin.com/ashishJSInheritance/1/embed?js,console'}),
     'session4_4'  : genrateJsBinSessionDetails({sid:4, ssid: '4', url: '//jsbin.com/javascript4/7/embed?js,console'}),
