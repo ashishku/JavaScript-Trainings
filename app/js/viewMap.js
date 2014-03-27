@@ -164,7 +164,9 @@ define({
           { url: '#side/session3_26', title: 'Date' }
         ]
     }),
-    'session4_1'  : genrateJsBinSessionDetails({sid:4, ssid: '1', url: '//jsbin.com/javascript5/6/embed?js,console'}),
-    'session4_2'  : genrateJsBinSessionDetails({sid:4, ssid: '1', url: '//jsbin.com/javascript5/6/embed?js,console'}),
-    //'session3_6'  : genrateJsBinSessionDetails({sid:3, ssid: '6', url: '//jsbin.com/javascript3/2/embed?js,console'}),
+    'session4_1'  : genrateJsBinSessionDetails({sid:4, ssid: '1', url: '//jsbin.com/javascript3/5/embed?js,console'}),
+    'session4_2'  : genrateJsBinSessionDetails({sid:4, ssid: '2', url: '//jsbin.com/javascript5/10/embed?js,console'}),
+    'session4_3'  : genrateJsBinSessionDetails({sid:4, ssid: '3', url: '//jsbin.com/ashishJSInheritance/1/embed?js,console'}),
+    'session4_4'  : genrateJsBinSessionDetails({sid:4, ssid: '4', url: '//jsbin.com/javascript4/7/embed?js,console'}),
+    'session4_5'  : genrateJsBinSessionDetails({sid:4, ssid: '5', url: '//jsbin.com/ashishJSOOPs/2/embed?js,console'}),
 });
