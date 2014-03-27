@@ -1,39 +1,50 @@
 <div class="container">
-    <strong>Creating Arrays</strong>
+    <strong>Arrays Methods</strong>
     <ul>
-        <li>[]</li>
+        <li>join()</li>
 
-        <li>
-            new Array()
-            <ul>
-                <li>with out any arguments
-                    <br/>creates empty array</li>
-                <li>single argument
-                    <br />creates array with given length</li>
-                <li>more than one argument
-                    <br/>creates array with given elements</li>
-            </ul>
+        <li>reverse()</li>
+
+        <li>sort()
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>var</span> a <span style='color:#308080; '>=</span> <span style='color:#308080; '>[</span><span style='color:#008c00; '>33</span><span style='color:#308080; '>,</span> <span style='color:#008c00; '>4</span><span style='color:#308080; '>,</span> <span style='color:#008c00; '>1111</span><span style='color:#308080; '>,</span> <span style='color:#008c00; '>222</span><span style='color:#308080; '>]</span><span style='color:#406080; '>;</span>
+  a<span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>sort</span><span style='color:#308080; '>(</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>				<span style='color:#595979; '>// Alphabetical order: 1111, 222, 33, 4</span>
+  a<span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>sort</span><span style='color:#308080; '>(</span><span style='color:#200080; font-weight:bold; '>function</span><span style='color:#308080; '>(</span>a<span style='color:#308080; '>,</span>b<span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>			<span style='color:#595979; '>// Numerical order: 4, 33, 222, 1111</span>
+    <span style='color:#200080; font-weight:bold; '>return</span> a<span style='color:#308080; '>-</span>b<span style='color:#406080; '>;</span>				<span style='color:#595979; '>// Returns &amp;lt; 0, 0, or &amp;gt; 0, depending on order</span>
+  <span style='color:#406080; '>}</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+  a<span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>sort</span><span style='color:#308080; '>(</span><span style='color:#200080; font-weight:bold; '>function</span><span style='color:#308080; '>(</span>a<span style='color:#308080; '>,</span>b<span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>
+    <span style='color:#200080; font-weight:bold; '>return</span> b<span style='color:#308080; '>-</span>a<span style='color:#406080; '>;</span>				<span style='color:#595979; '>// Reverse numerical order</span>
+  <span style='color:#406080; '>}</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+</pre>
         </li>
-
-        <li>Array.lenght</li>
-    </ul>
-
-    <hr />
-
-    <strong>Adding and removing elements</strong>
-    <ul>
-        <li>push</li>
-        <li>pop</li>
-        <li>shift</li>
-        <li>unshift</li>
-        <li>delete</li>
-    </ul>
-    <hr />
-
-    <strong>Iterating Arrays</strong>
-    <ul>
-        <li>for</li>
-        <li>for in</li>
-        <li>forEach</li>
+        
+        <li>concat()
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>var</span> a <span style='color:#308080; '>=</span> <span style='color:#308080; '>[</span><span style='color:#008c00; '>1</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>2</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>3</span><span style='color:#308080; '>]</span><span style='color:#406080; '>;</span>
+  a<span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>concat</span><span style='color:#308080; '>(</span><span style='color:#008c00; '>4</span><span style='color:#308080; '>,</span> <span style='color:#008c00; '>5</span><span style='color:#308080; '>)</span>			<span style='color:#595979; '>// Returns [1,2,3,4,5]</span>
+  a<span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>concat</span><span style='color:#308080; '>(</span><span style='color:#308080; '>[</span><span style='color:#008c00; '>4</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>5</span><span style='color:#308080; '>]</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>		<span style='color:#595979; '>// Returns [1,2,3,4,5]</span>
+  a<span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>concat</span><span style='color:#308080; '>(</span><span style='color:#308080; '>[</span><span style='color:#008c00; '>4</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>5</span><span style='color:#308080; '>]</span><span style='color:#308080; '>,</span><span style='color:#308080; '>[</span><span style='color:#008c00; '>6</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>7</span><span style='color:#308080; '>]</span><span style='color:#308080; '>)</span>		<span style='color:#595979; '>// Returns [1,2,3,4,5,6,7]</span>
+  a<span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>concat</span><span style='color:#308080; '>(</span><span style='color:#008c00; '>4</span><span style='color:#308080; '>,</span> <span style='color:#308080; '>[</span><span style='color:#008c00; '>5</span><span style='color:#308080; '>,</span><span style='color:#308080; '>[</span><span style='color:#008c00; '>6</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>7</span><span style='color:#308080; '>]</span><span style='color:#308080; '>]</span><span style='color:#308080; '>)</span>		<span style='color:#595979; '>// Returns [1,2,3,4,5,[6,7]]</span>
+</pre>
+        </li>
+        
+        <li>slice()
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>var</span> a <span style='color:#308080; '>=</span> <span style='color:#308080; '>[</span><span style='color:#008c00; '>1</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>2</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>3</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>4</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>5</span><span style='color:#308080; '>]</span><span style='color:#406080; '>;</span>
+  a<span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>slice</span><span style='color:#308080; '>(</span><span style='color:#008c00; '>0</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>3</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>		<span style='color:#595979; '>// Returns [1,2,3]</span>
+  a<span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>slice</span><span style='color:#308080; '>(</span><span style='color:#008c00; '>3</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>		<span style='color:#595979; '>// Returns [4,5]</span>
+  a<span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>slice</span><span style='color:#308080; '>(</span><span style='color:#008c00; '>1</span><span style='color:#308080; '>,</span><span style='color:#308080; '>-</span><span style='color:#008c00; '>1</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>		<span style='color:#595979; '>// Returns [2,3,4]</span>
+  a<span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>slice</span><span style='color:#308080; '>(</span><span style='color:#308080; '>-</span><span style='color:#008c00; '>3</span><span style='color:#308080; '>,</span><span style='color:#308080; '>-</span><span style='color:#008c00; '>2</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>		<span style='color:#595979; '>// Returns [3]</span>
+</pre>
+        </li>
+        
+        <li>splice()
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>var</span> a <span style='color:#308080; '>=</span> <span style='color:#308080; '>[</span><span style='color:#008c00; '>1</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>2</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>3</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>4</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>5</span><span style='color:#308080; '>]</span><span style='color:#406080; '>;</span>
+  a<span style='color:#308080; '>.</span>splice<span style='color:#308080; '>(</span><span style='color:#008c00; '>2</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>0</span><span style='color:#308080; '>,</span><span style='color:#1060b6; '>'a'</span><span style='color:#308080; '>,</span><span style='color:#1060b6; '>'b'</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>		<span style='color:#595979; '>// Returns []; a is [1,2,'a','b',3,4,5]</span>
+  a<span style='color:#308080; '>.</span>splice<span style='color:#308080; '>(</span><span style='color:#008c00; '>2</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>2</span><span style='color:#308080; '>,</span><span style='color:#308080; '>[</span><span style='color:#008c00; '>1</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>2</span><span style='color:#308080; '>]</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>3</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>		<span style='color:#595979; '>// Returns ['a','b']; a is [1,2,[1,2],3,3,4,5]</span>
+</pre>
+        </li>
+        <li>push,pop,unshit,shift</li>
     </ul>
 </div>

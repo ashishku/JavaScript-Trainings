@@ -1,51 +1,51 @@
 <div class="container">
   <ul>
-    <li>length
-<pre style='color:#000020;background:#f6f8ff;'>
-  <span style='color:#595979; '>// This function uses arguments.callee, so it won't work in strict mode.</span>
-  <span style='color:#200080; font-weight:bold; '>function</span> check<span style='color:#308080; '>(</span>args<span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>
-    <span style='color:#200080; font-weight:bold; '>var</span> actual <span style='color:#308080; '>=</span> args<span style='color:#308080; '>.</span>length<span style='color:#406080; '>;</span>           <span style='color:#595979; '>// The actual number of arguments</span>
-    <span style='color:#200080; font-weight:bold; '>var</span> expected <span style='color:#308080; '>=</span> args<span style='color:#308080; '>.</span>callee<span style='color:#308080; '>.</span>length<span style='color:#406080; '>;</span>  <span style='color:#595979; '>// The expected number of arguments</span>
-    <span style='color:#200080; font-weight:bold; '>if</span> <span style='color:#308080; '>(</span>actual <span style='color:#308080; '>!==</span> expected<span style='color:#308080; '>)</span>
-    <span style='color:#595979; '>// Throw an exception if they differ.</span>
-    <span style='color:#200080; font-weight:bold; '>throw</span> Error<span style='color:#308080; '>(</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>Expected </span><span style='color:#800000; '>"</span> <span style='color:#308080; '>+</span> expected <span style='color:#308080; '>+</span> <span style='color:#800000; '>"</span><span style='color:#1060b6; '>args; got </span><span style='color:#800000; '>"</span> <span style='color:#308080; '>+</span> actual<span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
-  <span style='color:#406080; '>}</span>
-  
-  <span style='color:#200080; font-weight:bold; '>function</span> f<span style='color:#308080; '>(</span>x<span style='color:#308080; '>,</span> y<span style='color:#308080; '>,</span> z<span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>
-    check<span style='color:#308080; '>(</span><span style='color:#007d45; '>arguments</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
-    <span style='color:#200080; font-weight:bold; '>return</span> x <span style='color:#308080; '>+</span> y <span style='color:#308080; '>+</span> z<span style='color:#406080; '>;</span>
+    <li>Higher Order Function
+      <ul>
+        <li>bind to an object
+          <br/>The bind() method was added in ECMAScript 5, but it is easy to simulate in ECMAScript 3. As its name implies, the primary purpose of bind() is to bind a function to an object. When you invoke the bind() method on a function f and pass an object
+          o , the method returns a new function. Invoking the new function (as a function) invokes the original function f as a method of o . Any arguments you pass to the new function are passed to the original function. For example:
+          <pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>function</span> f<span style='color:#308080; '>(</span>y<span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span> <span style='color:#200080; font-weight:bold; '>return</span> <span style='color:#200080; font-weight:bold; '>this</span><span style='color:#308080; '>.</span>x <span style='color:#308080; '>+</span> y<span style='color:#406080; '>;</span> <span style='color:#406080; '>}</span>  <span style='color:#595979; '>// This function needs to be bound</span>
+  <span style='color:#200080; font-weight:bold; '>var</span> o <span style='color:#308080; '>=</span> <span style='color:#406080; '>{</span> x <span style='color:#406080; '>:</span> <span style='color:#008c00; '>1</span> <span style='color:#406080; '>}</span><span style='color:#406080; '>;</span>                    <span style='color:#595979; '>// An object we'll bind to</span>
+  <span style='color:#200080; font-weight:bold; '>var</span> g <span style='color:#308080; '>=</span> f<span style='color:#308080; '>.</span>bind<span style='color:#308080; '>(</span>o<span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>                    <span style='color:#595979; '>// Calling g(y) invokes o.f(y)</span>
+  g<span style='color:#308080; '>(</span><span style='color:#008c00; '>2</span><span style='color:#308080; '>)</span>                                  <span style='color:#595979; '>// => 3</span>
+</pre>
+          It is easy to accomplish this kind of binding with code like the following:
+          <pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#595979; '>// Return a function that invokes f as a method of o, passing all its arguments.</span>
+  <span style='color:#200080; font-weight:bold; '>function</span> bind<span style='color:#308080; '>(</span>f<span style='color:#308080; '>,</span> o<span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>
+    <span style='color:#200080; font-weight:bold; '>if</span> <span style='color:#308080; '>(</span>f<span style='color:#308080; '>.</span>bind<span style='color:#308080; '>)</span> <span style='color:#200080; font-weight:bold; '>return</span> f<span style='color:#308080; '>.</span>bind<span style='color:#308080; '>(</span>o<span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>   <span style='color:#595979; '>// Use the bind method, if there is one</span>
+    <span style='color:#200080; font-weight:bold; '>else</span> <span style='color:#200080; font-weight:bold; '>return</span> <span style='color:#200080; font-weight:bold; '>function</span><span style='color:#308080; '>(</span><span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>        <span style='color:#595979; '>// Otherwise, bind it like this</span>
+      <span style='color:#200080; font-weight:bold; '>return</span> f<span style='color:#308080; '>.</span>apply<span style='color:#308080; '>(</span>o<span style='color:#308080; '>,</span> <span style='color:#007d45; '>arguments</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+    <span style='color:#406080; '>}</span><span style='color:#406080; '>;</span>
   <span style='color:#406080; '>}</span>
 </pre>
-    </li>
+        </li>
 
-    <li>call and apply
-      call() and apply() allow you to indirectly invoke a function as if it were a
-      method of some other object. The first argument to both call() and apply() is the object on which the function is to be invoked; this argument is the invocation context and becomes the value
-      of the this keyword within the body of the function. To invoke the function f() as a
-      method of the object o (passing no arguments), you could use either call() or apply() :
-      
-<pre style='color:#000020;background:#f6f8ff;'>
-  f<span style='color:#308080; '>.</span>call<span style='color:#308080; '>(</span>o<span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
-  f<span style='color:#308080; '>.</span>apply<span style='color:#308080; '>(</span>o<span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+        <li>partial function
+          <br/>The ECMAScript 5 bind() method does more than just bind a function to an object. It also performs partial application: any arguments you pass to bind() after the first are bound along with the this value. Partial application is a common technique
+          in functional programming and is sometimes called currying.
+          <pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>var</span> sum <span style='color:#308080; '>=</span> <span style='color:#200080; font-weight:bold; '>function</span><span style='color:#308080; '>(</span>x<span style='color:#308080; '>,</span>y<span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span> <span style='color:#200080; font-weight:bold; '>return</span> x <span style='color:#308080; '>+</span> y <span style='color:#406080; '>}</span><span style='color:#406080; '>;</span>   <span style='color:#595979; '>// Return the sum of 2 args</span>
+  <span style='color:#595979; '>// Create a new function like sum, but with the this value bound to null</span>
+  <span style='color:#595979; '>// and the 1st argument bound to 1. This new function expects just one arg.</span>
+  <span style='color:#200080; font-weight:bold; '>var</span> succ <span style='color:#308080; '>=</span> sum<span style='color:#308080; '>.</span>bind<span style='color:#308080; '>(</span><span style='color:#0f4d75; '>null</span><span style='color:#308080; '>,</span> <span style='color:#008c00; '>1</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+  succ<span style='color:#308080; '>(</span><span style='color:#008c00; '>2</span><span style='color:#308080; '>)</span>                                     <span style='color:#595979; '>// => 3: x is bound to 1, and we pass 2 for the y argument</span>
   
-  <span style='color:#595979; '>// above line (individully) are equivalent to lines below.</span>
-  o<span style='color:#308080; '>.</span>m <span style='color:#308080; '>=</span> f<span style='color:#406080; '>;</span>      <span style='color:#595979; '>// Make f a temporary method of o.</span>
-  o<span style='color:#308080; '>.</span>m<span style='color:#308080; '>(</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>        <span style='color:#595979; '>// Invoke it, passing no arguments.</span>
-  delete o<span style='color:#308080; '>.</span>m<span style='color:#406080; '>;</span>   <span style='color:#595979; '>// Remove the temporary method.</span>
+  <span style='color:#200080; font-weight:bold; '>function</span> f<span style='color:#308080; '>(</span>y<span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span> <span style='color:#200080; font-weight:bold; '>return</span> <span style='color:#200080; font-weight:bold; '>this</span><span style='color:#308080; '>.</span>x <span style='color:#308080; '>+</span> y <span style='color:#406080; '>}</span><span style='color:#406080; '>;</span>        <span style='color:#595979; '>// Another function that adds</span>
+  <span style='color:#200080; font-weight:bold; '>var</span> g <span style='color:#308080; '>=</span> f<span style='color:#308080; '>.</span>bind<span style='color:#308080; '>(</span><span style='color:#406080; '>{</span>x<span style='color:#406080; '>:</span><span style='color:#008c00; '>1</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span> <span style='color:#008c00; '>2</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>                   <span style='color:#595979; '>// Bind this and y</span>
+  g<span style='color:#308080; '>(</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>                                        <span style='color:#595979; '>// => 3: this.x is bound to 1, y is bound to 2</span>
 </pre>
-In ECMAScript 5 strict mode the first argument to call() or apply() becomes the value
-of this , even if it is a primitive value or null or undefined . In ECMAScript 3 and non-
-strict mode, a value of null or undefined is replaced with the global object and a primitive value is replaced with the corresponding wrapper object.
-Any arguments to call() after the first invocation context argument are the values that
-are passed to the function that is invoked.
-<pre style='color:#000020;background:#f6f8ff;'>
-  f<span style='color:#308080; '>.</span>call<span style='color:#308080; '>(</span>o<span style='color:#308080; '>,</span> <span style='color:#008c00; '>1</span><span style='color:#308080; '>,</span> <span style='color:#008c00; '>2</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
-</pre>
-The apply() method is like the call() method, except that the arguments to be passed
-to the function are specified as an array:
-<pre style='color:#000020;background:#f6f8ff;'>
-  f<span style='color:#308080; '>.</span>apply<span style='color:#308080; '>(</span>o<span style='color:#308080; '>,</span> <span style='color:#308080; '>[</span><span style='color:#008c00; '>1</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>2</span><span style='color:#308080; '>]</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+        </li>
+      </ul>
+    </li>
+    <li>toString()</li>
+    <li>Function constructor
+      <pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>var</span> f <span style='color:#308080; '>=</span> <span style='color:#200080; font-weight:bold; '>new</span> <span style='color:#007d45; '>Function</span><span style='color:#308080; '>(</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>x</span><span style='color:#800000; '>"</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>"</span><span style='color:#1060b6; '>y</span><span style='color:#800000; '>"</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>"</span><span style='color:#1060b6; '>return x*y;</span><span style='color:#800000; '>"</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
 </pre>
     </li>
+    <li>callable object</li>
   </ul>
 </div>

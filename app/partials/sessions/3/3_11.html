@@ -1,59 +1,39 @@
 <div class="container">
-  <strong>Class Attributes</strong>
-  <ul>
-    <li>
-      Object.getPrototypeOf() / isPrototypeOf()
-    </li>
+    <strong>Creating Arrays</strong>
+    <ul>
+        <li>[]</li>
 
-    <li>
-      toString [object class]
-    </li>
+        <li>
+            new Array()
+            <ul>
+                <li>with out any arguments
+                    <br/>creates empty array</li>
+                <li>single argument
+                    <br />creates array with given length</li>
+                <li>more than one argument
+                    <br/>creates array with given elements</li>
+            </ul>
+        </li>
 
-    <li>
-      Object.preventExtensions() / Object.isExtensible()<br/>
-      There is no way to make an object extensible again once you have made it nonextensible. 
-      Also note that calling preventExtensions() only affects the extensibility of the object itself.
-      If new properties are added to the prototype of a nonextensible object, the nonextensible object will inherit those new properties.
-    </li>
-    
-    <li>
-      Object.seal() / Object.isSealed() <br/>
-      It works like Object.preventExtensions() , but in addition to making the
-object nonextensible, it also makes all of the own properties of that object nonconfig-
-urable. This means that new properties cannot be added to the object, and existing
-properties cannot be deleted or configured. Existing properties that are writable can
-still be set, however. There is no way to unseal a sealed object.
-    </li>
-    
-    <li>
-      Object.freeze() / Object.isFrozen()<br/>
-      It locks objects down even more tightly. In addition to making the object
-nonextensible and its properties nonconfigurable, it also makes all of the object’s own
-data properties read-only. (If the object has accessor properties with setter methods,
-these are not affected and can still be invoked by assignment to the property.)
-    </li>
-  </ul>
-  <hr />
-  
-  <strong>Serializing Objects</strong>
-  <ul>
-    <li>JSON.stringify()</li>
-    <li>JSON.parse()</li>
-  </ul>
- Objects, arrays, strings, finite numbers, true , false , and null are supported and
-can be serialized and restored. NaN , Infinity , and -Infinity are serialized to null . Date
-objects are serialized to ISO-formatted date strings (see the Date.toJSON() function),
-but JSON.parse() leaves these in string form and does not restore the original Date
-object. Function, RegExp, and Error objects and the undefined value cannot be serial-
-ized or restored. JSON.stringify() serializes only the enumerable own properties of an
-object. Both JSON.stringify() and JSON.parse() accept optional second
-arguments that can be used to customize the serialization and/or restoration process
-by specifying a list of properties to be serialized.
-  <hr />
-  <ul>
-    <li>toString()</li>
-    <li>toLocaleString()</li>
-    <li>toJSON()</li>
-    <li>valueOf()</li>
-  </ul>
+        <li>Array.lenght</li>
+    </ul>
+
+    <hr />
+
+    <strong>Adding and removing elements</strong>
+    <ul>
+        <li>push</li>
+        <li>pop</li>
+        <li>shift</li>
+        <li>unshift</li>
+        <li>delete</li>
+    </ul>
+    <hr />
+
+    <strong>Iterating Arrays</strong>
+    <ul>
+        <li>for</li>
+        <li>for in</li>
+        <li>forEach</li>
+    </ul>
 </div>

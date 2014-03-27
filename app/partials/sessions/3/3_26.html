@@ -1,0 +1,32 @@
+<div class="container">
+  <strong>Date</strong>
+  The Date object is used to work with dates and times. 
+  Date objects are created with the Date() constructor.
+  There are four ways of initiating a date:
+  <pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#595979; '>// new Date()               => current date and time</span>
+  <span style='color:#200080; font-weight:bold; '>var</span> today <span style='color:#308080; '>=</span> <span style='color:#200080; font-weight:bold; '>new</span> <span style='color:#007d45; '>Date</span><span style='color:#308080; '>(</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+  
+  <span style='color:#595979; '>// new Date(milliseconds)   => milliseconds since 1970/01/01</span>
+  <span style='color:#200080; font-weight:bold; '>var</span> d1 <span style='color:#308080; '>=</span> <span style='color:#200080; font-weight:bold; '>new</span> <span style='color:#007d45; '>Date</span><span style='color:#308080; '>(</span><span style='color:#008c00; '>102578</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+  
+  <span style='color:#595979; '>// new Date(dateString)</span>
+  <span style='color:#200080; font-weight:bold; '>var</span> d1 <span style='color:#308080; '>=</span> <span style='color:#200080; font-weight:bold; '>new</span> <span style='color:#007d45; '>Date</span><span style='color:#308080; '>(</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>October 13, 1975 11:13:00</span><span style='color:#800000; '>"</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+  
+  <span style='color:#595979; '>// new Date(year, month, day, hours, minutes, seconds, milliseconds)</span>
+  <span style='color:#200080; font-weight:bold; '>var</span> d3 <span style='color:#308080; '>=</span> <span style='color:#200080; font-weight:bold; '>new</span> <span style='color:#007d45; '>Date</span><span style='color:#308080; '>(</span><span style='color:#008c00; '>79</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>5</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>24</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>11</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>33</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>0</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+</pre>
+<hr/>
+<strong>Comparing dates/strong>
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>var</span> x<span style='color:#308080; '>=</span><span style='color:#200080; font-weight:bold; '>new</span> <span style='color:#007d45; '>Date</span><span style='color:#308080; '>(</span><span style='color:#008c00; '>2100</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>01</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>14</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+  <span style='color:#200080; font-weight:bold; '>var</span> today <span style='color:#308080; '>=</span> <span style='color:#200080; font-weight:bold; '>new</span> <span style='color:#007d45; '>Date</span><span style='color:#308080; '>(</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+  
+  <span style='color:#200080; font-weight:bold; '>if</span> <span style='color:#308080; '>(</span>x<span style='color:#308080; '>></span>today<span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>
+    console<span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>log</span><span style='color:#308080; '>(</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>Today is before 14th January 2100</span><span style='color:#800000; '>"</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+  <span style='color:#406080; '>}</span>
+  <span style='color:#200080; font-weight:bold; '>else</span> <span style='color:#406080; '>{</span>
+    console<span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>log</span><span style='color:#308080; '>(</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>Today is after 14th January 2100</span><span style='color:#800000; '>"</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+  <span style='color:#406080; '>}</span>
+</pre>
+</div>

@@ -1,0 +1,68 @@
+<div class="container">
+  <strong>Regex</strong>
+  <ul>
+    <li>Creating Object
+      <br/>
+      <pre style='color:#000020;background:#f6f8ff;' <span style='color:#200080; font-weight:bold; '>var</span> pattern <span style='color:#308080; '>=</span><span style='color:#1060b6; '> </span><span style='color:#800000; '>/</span><span style='color:#1060b6; '>s</span><span style='color:#308080; '>$</span><span style='color:#800000; '>/</span><span style='color:#406080; '>;</span>
+  <span style='color:#200080; font-weight:bold; '>var</span> pattern <span style='color:#308080; '>=</span> <span style='color:#200080; font-weight:bold; '>new</span> <span style='color:#007d45; '>RegExp</span><span style='color:#308080; '>(</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>s$</span><span style='color:#800000; '>"</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+</pre>
+    </li>
+    <li>Properties
+      <ul>
+        <li>source</li>
+        <li>global, ignoreCase, multiline</li>
+        <li>lastIndex</li>
+      </ul>
+    </li>
+    <li>Methods
+      <ul>
+        <li>String Methods
+          <ul>
+            <li>search()
+              <br/>Returns charecter position of text found(-1 if not found)
+              <pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#800000; '>"</span><span style='color:#1060b6; '>JavaScript</span><span style='color:#800000; '>"</span><span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>search</span><span style='color:#308080; '>(</span><span style='color:#800000; '>/</span><span style='color:#1060b6; '>script</span><span style='color:#800000; '>/</span><span style='color:#200080; font-weight:bold; '>i</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+</pre>
+            </li>
+            <li>replace()
+              <br/>search and replace text
+              <pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#595979; '>// No matter how it is capitalized, replace it with the correct capitalization</span>
+  text<span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>replace</span><span style='color:#308080; '>(</span><span style='color:#800000; '>/</span><span style='color:#1060b6; '>javascript</span><span style='color:#800000; '>/</span><span style='color:#200080; font-weight:bold; '>gi</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>"</span><span style='color:#1060b6; '>JavaScript</span><span style='color:#800000; '>"</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+</pre>
+            </li>
+            <li>match()
+              <br/>It takes a regular expression as its only argument and returns an array that contains the results of the match
+              <pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#800000; '>"</span><span style='color:#1060b6; '>1 plus 2 equals 3</span><span style='color:#800000; '>"</span><span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>match</span><span style='color:#308080; '>(</span><span style='color:#800000; '>/</span><span style='color:#007d45; '>\d</span><span style='color:#308080; '>+</span><span style='color:#800000; '>/</span><span style='color:#200080; font-weight:bold; '>g</span><span style='color:#308080; '>)</span>    <span style='color:#595979; '>// returns ["1", "2", "3"]</span>
+</pre>
+            </li>
+          </ul>
+        </li>
+        <li>RegExp Object
+          <ul>
+            <li>exec()
+              <br/>If it  find a match, it returns an array just like the array returned by the match().
+              <pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>var</span> pattern <span style='color:#308080; '>=</span><span style='color:#1060b6; '> </span><span style='color:#800000; '>/</span><span style='color:#1060b6; '>Java</span><span style='color:#800000; '>/</span><span style='color:#200080; font-weight:bold; '>g</span><span style='color:#406080; '>;</span>
+  <span style='color:#200080; font-weight:bold; '>var</span> text <span style='color:#308080; '>=</span> <span style='color:#800000; '>"</span><span style='color:#1060b6; '>JavaScript syntax is similar to Java!</span><span style='color:#800000; '>"</span><span style='color:#406080; '>;</span>
+  <span style='color:#200080; font-weight:bold; '>var</span> result<span style='color:#406080; '>;</span>
+  <span style='color:#200080; font-weight:bold; '>while</span><span style='color:#308080; '>(</span><span style='color:#308080; '>(</span>result <span style='color:#308080; '>=</span> pattern<span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>exec</span><span style='color:#308080; '>(</span>text<span style='color:#308080; '>)</span><span style='color:#308080; '>)</span> <span style='color:#308080; '>!=</span> <span style='color:#0f4d75; '>null</span><span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>
+    console<span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>log</span><span style='color:#308080; '>(</span>result<span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+  <span style='color:#406080; '>}</span>
+</pre>
+
+            </li>
+            <li>test()
+              <br/>It takes a string and returns true if the string contains a match for the regular expression
+              <pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>var</span> pattern <span style='color:#308080; '>=</span><span style='color:#1060b6; '> </span><span style='color:#800000; '>/</span><span style='color:#1060b6; '>java</span><span style='color:#800000; '>/</span><span style='color:#200080; font-weight:bold; '>i</span><span style='color:#406080; '>;</span>
+  pattern<span style='color:#308080; '>.</span><span style='color:#200080; font-weight:bold; '>test</span><span style='color:#308080; '>(</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>JavaScript</span><span style='color:#800000; '>"</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span> <span style='color:#595979; '>// Returns true</span>
+</pre>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

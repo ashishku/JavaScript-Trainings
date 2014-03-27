@@ -1,0 +1,44 @@
+<div class="container">
+  <h4>Properties</h4>
+  <ul>
+    <li>
+      Using keywords for property names
+    </li>
+
+    <li>
+      Using as associative array
+    </li>
+
+    <li>
+      Testing properties.
+      <ul>
+        <li>in</li>
+        <li>hasOwnProperty</li>
+        <li>propertyIsEnumerable</li>
+      </ul>
+    </li>
+    
+    <li>Enumerating own properties
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>for</span><span style='color:#308080; '>(</span>p <span style='color:#200080; font-weight:bold; '>in</span> o<span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>
+    <span style='color:#200080; font-weight:bold; '>if</span> <span style='color:#308080; '>(</span><span style='color:#308080; '>!</span>o<span style='color:#308080; '>.</span>hasOwnProperty<span style='color:#308080; '>(</span>p<span style='color:#308080; '>)</span><span style='color:#308080; '>)</span> <span style='color:#200080; font-weight:bold; '>continue</span><span style='color:#406080; '>;</span>           <span style='color:#595979; '>// Skip inherited propertied</span>
+    <span style='color:#200080; font-weight:bold; '>if</span> <span style='color:#308080; '>(</span><span style='color:#200080; font-weight:bold; '>typeof</span> o<span style='color:#308080; '>[</span>p<span style='color:#308080; '>]</span> <span style='color:#308080; '>===</span> <span style='color:#800000; '>"</span><span style='color:#1060b6; '>function</span><span style='color:#800000; '>"</span><span style='color:#308080; '>)</span> <span style='color:#200080; font-weight:bold; '>continue</span><span style='color:#406080; '>;</span>     <span style='color:#595979; '>// Skip methods</span>
+  
+  <span style='color:#406080; '>}</span>
+</pre>
+    </li>
+    
+    <li>Getter and setters
+<pre style='color:#000020;background:#f6f8ff;'>
+<span style='color:#200080; font-weight:bold; '>var</span> o <span style='color:#308080; '>=</span> <span style='color:#406080; '>{</span>
+    <span style='color:#595979; '>// An ordinary data property</span>
+    data_prop<span style='color:#406080; '>:</span> value<span style='color:#308080; '>,</span>
+  
+    <span style='color:#595979; '>// An accessor property defined as a pair of functions</span>
+    get accessor_prop<span style='color:#308080; '>(</span><span style='color:#308080; '>)</span>      <span style='color:#406080; '>{</span> <span style='color:#595979; '>/* function body here */</span> <span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>  <span style='color:#595979; '>// If getter is missing value is write only</span>
+    set accessor_prop<span style='color:#308080; '>(</span>value<span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span> <span style='color:#595979; '>/* function body here */</span> <span style='color:#406080; '>}</span>   <span style='color:#595979; '>// If setter is missing value is read only</span>
+  <span style='color:#406080; '>}</span><span style='color:#406080; '>;</span>
+</pre>
+    </li>
+  </ul>
+</div>
