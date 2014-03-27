@@ -158,10 +158,6 @@ define({
         session: 'Opps',
         subSessions: [
           { url: '#side/session4_1', title: 'Inheritance' },
-          { url: '#side/session3_11', title: 'Arrays' },
-          { url: '#side/session3_15', title: 'Functions' },
-          { url: '#side/session3_24', title: 'Regex' },
-          { url: '#side/session3_26', title: 'Date' }
         ]
     }),
     'session4_1'  : genrateJsBinSessionDetails({sid:4, ssid: '1', url: '//jsbin.com/javascript3/5/embed?js,console'}),

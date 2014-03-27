@@ -30,7 +30,6 @@ define(['jquery', 'underscore', 'backbone', 'text!partials/indexView.html'], fun
                     ]},
                     { url: '#side/session4', title: 'OPPs', topics:[
                         { url: '#side/session4_1', title: 'Inheritance' },
-                        { url: '#side/session4_2', title: 'Libraries' }
                     ]},
                     { url: '#side/session5', title: 'Modules & Libraries', topics:[
                         { url: '#side/session5_1', title: 'Modules' },
