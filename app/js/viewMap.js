@@ -150,7 +150,7 @@ define({
     ///////////////////////////////////////////////////////////////
     'session3_26' : genrateHtmlSessionDetails ({sid:3, ssid: '26'}),
     'session3_27' : genrateHtmlSessionDetails ({sid:3, ssid: '27'}),
-    'session3_28' : genrateHtmlSessionDetails ({sid:3, ssid: '28'}),
+    'session3_28' : genrateHtmlSessionDetails ({sid:3, ssid: '28', next: 'session4'}),
 
     'session4'   : genrateSummarySessionDetails({
         sid:4, 
