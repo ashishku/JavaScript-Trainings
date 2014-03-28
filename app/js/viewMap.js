@@ -178,6 +178,6 @@ define({
     'session4_8'  : genrateJsBinSessionDetails({sid:4, ssid: '8', url: '//jsbin.com/ashishJSOOPsStatic/2/embed?js,console'}),
     'session4_9'  : genrateJsBinSessionDetails({sid:4, ssid: '9', url: '//jsbin.com/ashishJSOOPsPrivate/1/embed?js,console'}),
     'session4_10' : genrateJsBinSessionDetails({sid:4, ssid: '10', url: '//jsbin.com/ashishJSCallingSuper/1/embed?js,console'}),
-    'session4_11' : genrateJsBinSessionDetails({sid:4, ssid: '11', url: '//jsbin.com/ashishJSAbstractClass/1/embed?js,console'}),
+    'session4_11' : genrateJsBinSessionDetails({sid:4, ssid: '11', url: '//jsbin.com/ashishJSAbstractClass/4/embed?js,console'}),
 //    'session4_12' : genrateJsBinSessionDetails({sid:4, ssid: '12', url: '//jsbin.com/ashishJSCallingSuper/1/embed?js,console'}),
 });
