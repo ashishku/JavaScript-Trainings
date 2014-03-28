@@ -22,14 +22,22 @@ define(['jquery', 'underscore', 'backbone', 'text!partials/indexView.html'], fun
                         { url: '#side/session2_15', title: 'Miscellaneous Statements' },
                     ]},
                     { url: '#side/session3', title: 'Inbuild Objects', topics:[
-                        { url: '#side/session3_1', title: 'Objects' },
-                        { url: '#side/session3_11', title: 'Arrays' },
-                        { url: '#side/session3_15', title: 'Functions' },
-                        { url: '#side/session3_24', title: 'Regex' },
-                        { url: '#side/session3_26', title: 'Date' }
+                      { url: '#side/session3_1', title: 'Objects' },
+                      { url: '#side/session3_11', title: 'Arrays' },
+                      { url: '#side/session3_15', title: 'Functions' },
+                      { url: '#side/session3_24', title: 'Regex' },
+                      { url: '#side/session3_26', title: 'Date' }
                     ]},
                     { url: '#side/session4', title: 'OPPs', topics:[
-                        { url: '#side/session4_1', title: 'Inheritance' },
+                      { url: '#side/session4_1',  title: 'Constructor' },
+                      { url: '#side/session4_2',  title: 'Inheritance' },
+                      { url: '#side/session4_4',  title: "Accesing Prototype object's properties"},
+                      { url: '#side/session4_6',  title: "Identifing Class"},
+                      { url: '#side/session4_7',  title: "Constructor Property"},
+                      { url: '#side/session4_8',  title: "Static Variables/Methods"},
+                      { url: '#side/session4_9',  title: "Public and Private Variables/Methods"},
+                      { url: '#side/session4_10', title: "Constructor and method chaining from subclass to superclass"},
+                      { url: '#side/session4_11', title: "Abstract Class & module"}
                     ]},
                     { url: '#side/session5', title: 'Modules & Libraries', topics:[
                         { url: '#side/session5_1', title: 'Modules' },
