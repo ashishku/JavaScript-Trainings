@@ -188,7 +188,7 @@ define({
         { url: '#side/session5_1',  title: 'Revisit Module' },
         { url: '#side/session5_2',  title: 'Loading Module' },
         { url: '#side/session5_4',  title: 'Require.js' },
-        { url: '#side/session5_6',  title: 'underscore.js' },
+        { url: '#side/session5_7',  title: 'underscore.js' },
       ]
     }),
     'session5_1'  : genrateJsBinSessionDetails({sid:5, ssid: '1',  url: '//jsbin.com/ashishJSModulesImportExport/4/embed?js,console', previous: 'session5'}),
