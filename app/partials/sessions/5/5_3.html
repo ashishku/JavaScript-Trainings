@@ -1,0 +1,81 @@
+<h4>Loading Module</h4>
+<details open>
+  <summary><strong>Common.js</strong></summary>
+  <ul>
+    <li> Modules
+      <ul>
+        <li>require
+          <br/>In a module, there is a free variable "require", that is a Function.
+          <ol>
+            <li>The "require" function accepts a module identifier.</li>
+            <li>"require" returns the exported API of the foreign module.</li>
+            <li>If there is a dependency cycle, the foreign module may not have finished executing at the time it is required by one of its transitive dependencies; in this case, the object returned by "require" must contain at least the exports that the foreign
+              module has prepared before the call to require that led to the current module's execution.</li>
+            <li>If the requested module cannot be returned, "require" must throw an error.</li>
+            <li>The "require" function may have a "main" property that is read-only, don't delete and represents the top-level "module" object of the program. If this property is provided, it must be referentially identical to the "module" object of the main
+              program.
+            </li>
+            <li>The "require" function may have a "paths" attribute, that is a prioritized Array of path Strings, from high to low, of paths to top-level module directories.</li>
+            <ol>
+              <li>The "paths" property must not exist in "sandbox" (a secured module system).</li>
+              <li>The "paths" attribute must be referentially identical in all modules.</li>
+              <li>Replacing the "paths" object with an alternate object may have no effect.</li>
+              <li>If the "paths" attribute exists, in-place modification of the contents of "paths" must be reflected by corresponding module search behavior.</li>
+              <li>If the "paths" attribute exists, it may not be an exhaustive list of search paths, as the loader may internally look in other locations before or after the mentioned paths.</li>
+              <li>If the "paths" attribute exists, it is the loader's prorogative to resolve, normalize, or canonicalize the paths provided.</li>
+            </ol>
+          </ol>
+        </li>
+        <li>export
+          <br/>In a module, there is a free variable called "exports", that is an object that the module may add its API to as it executes.
+          <ol>
+            <li>modules must use the "exports" object as the only means of exporting.</li>
+          </ol>
+        </li>
+        <li>module
+          <br/>In a module, there must be a free variable "module", that is an Object.
+          <ol>
+            <li>The "module" object must have a read-only, don't delete "id" property that is the top-level "id" of the module. The "id" property must be such that require(module.id) will return the exports object from which the module.id originated. (That is
+              to say module.id can be passed to another module, and requiring that must return the original module).</li>
+            <li>The "module" object may have a "uri" String that is the fully-qualified URI to the resource from which the module was created. The "uri" property must not exist in a sandbox.</li>
+          </ol>
+        </li>
+      </ul>
+    </li>
+    <li>Packages, IO, Filesystem, Promises, etc ....</li>
+  </ul>
+</details>
+
+<details>
+  <summary><strong>AMD (Asynchronous Module Definition)</strong></summary>
+  <ul>
+    <li>define<br/> defining a module.
+      <ol>
+        <li>module id (optional)</li>
+        <li>dependencies array (optional)</li>
+        <li>module(object or function)</li>
+      </ol>
+      <pre style='color:#000020;background:#f6f8ff;'>
+  define<span style='color:#308080; '>(</span>
+      module_id <span style='color:#595979; '>/*optional*/</span><span style='color:#308080; '>,</span> 
+      <span style='color:#308080; '>[</span>dependencies<span style='color:#308080; '>]</span> <span style='color:#595979; '>/*optional*/</span><span style='color:#308080; '>,</span> 
+      definition <span style='color:#200080; font-weight:bold; '>function</span> <span style='color:#595979; '>/*function for instantiating the module or object*/</span>
+  <span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+</pre>
+    </li>
+    <li>require<br/>
+      loading dependencies asyncronusly
+      <ol>
+        <li>dependencies array</li>
+        <li>on load of dependencies</li>
+      </ol>
+    </li>
+    <li>export, module (from common.js</li>
+    <li>plugins</li>
+  </ul>
+  RequireJS, curl.js, bdLoad, lsjs, PINF, integrated tools inside dojo, MooTools, etc.
+</details>
+
+<details>
+  <summary><strong>Harmony</strong></summary>
+</details>

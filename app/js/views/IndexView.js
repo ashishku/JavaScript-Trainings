@@ -40,8 +40,10 @@ define(['jquery', 'underscore', 'backbone', 'text!partials/indexView.html'], fun
                       { url: '#side/session4_11', title: "Abstract Class & module"}
                     ]},
                     { url: '#side/session5', title: 'Modules & Libraries', topics:[
-                        { url: '#side/session5_1', title: 'Modules' },
-                        { url: '#side/session5_2', title: 'Libraries' }
+                      { url: '#side/session5_1',  title: 'Revisit Module' },
+                      { url: '#side/session5_2',  title: 'Loading Module' },
+                      { url: '#side/session5_4',  title: 'Require.js' },
+                      { url: '#side/session5_6',  title: 'underscore.js' },
                     ]},
                     { url: '#side/session6', title: 'The Good Parts' },
                     { url: '#side/session7', title: 'Browser', topics:[
