@@ -1,0 +1,49 @@
+<div class="container">
+  <strong>Bad Parts</strong>
+  <br/>Things easy to avoid.
+  <ul>
+    <li>== &amp; !=
+      <br/>Use === and !==
+    </li>
+    <li>with</li>
+    <li>eval</li>
+    <li>continue Statement
+      <br/>Code can always be refactored to remove it and be more simple.
+    </li>
+    <li>switch Fall Through
+      <br/> can be error prone
+    </li>
+    <li>Block-less Statements</li>
+    <li>++ & --
+      <br/>Most of the buffer overrun bugs that created terrible security vulnerabilities were due to code like this.
+    </li>
+    <li>Bitwise Operators
+      <br/>In Java, the bitwise operators work with integers. JavaScript doesn’t have integers. It
+only has double precision floating-point numbers. So, the bitwise operators convert
+their number operands into integers, do their business, and then convert them back.
+In most languages, these operators are very close to the hardware and very fast. In
+JavaScript, they are very far from the hardware and very slow. JavaScript is rarely
+used for doing bit manipulation.
+As a result, in JavaScript programs, it is more likely that &amp; is a mistyped &amp;&amp; operator.
+The presence of the bitwise operators reduces some of the language’s redundancy,
+making it easier for bugs to hide.
+    </li>
+    <li>The function Statement Versus the function Expression
+      <br/>function statement are always hoisted but expressions are not.
+    </li>
+    <li>Typed Wrappers
+      <br/>This
+turns out to be completely unnecessary and occasionally confusing. Don’t use new
+Boolean or new Number or new String .
+Also avoid new Object and new Array . Use {} and [] instead.
+    </li>
+    <li>new
+      <br/> removing new makes any constructor a normal function.
+    </li>
+    <li>void
+      <br/>In many languages, void is a type that has no values. In JavaScript, void is an opera-
+tor that takes an operand and returns undefined . This is not useful, and it is very con-
+fusing. Avoid void .
+    </li>
+  </ul>
+</div>

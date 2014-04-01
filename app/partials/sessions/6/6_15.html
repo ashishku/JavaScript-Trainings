@@ -1,0 +1,102 @@
+<div class="container">
+  <strong>JSLint</strong>
+  <ul>
+    <li>Undefined Variables and Functions (see example)</li>
+    <li>Members (see example)</li>
+    <li>
+    <details>
+      <summary>Options(see example)</summary>
+        <img src="img/sessions/jslintOptions.png" height="500px">
+      </details>
+    </li>
+    <li>Semicolon (laxbreak)</li>
+    <li>
+      <details>
+        <summary>Line Breaking</summary>
+        <br/>As a further defense against the masking of errors by the semicolon insertion mechanism, 
+        JSLint expects long statements to be broken only after one of these punctuation characters or operators:
+        <br/>, . ; : { } ( [ = < > ? ! + - * / % ~ ^ | &amp;
+        <br/>== != <= >= += -= *= /= %= ^= |= &amp;= << >> || &amp;&amp;
+        <br/>=== !== <<= >>= >>> >>>=
+        <br/>JSLint does not expect to see a long statement broken after an identifier, a string, a
+        number, a closer, or a suffix operator:
+        <br/>) ] ++ --
+      </details>
+    </li>
+    <li>Comma</li>
+    <li>Required Blocks</li>
+    <li>Forbidden Blocks</li>
+    <li>Expression Statements</li>
+    <li>for in Statement</li>
+    <li>switch Statement</li>
+    <li>
+      <details>
+        <summary>var Statement</summary>
+        JavaScript allows var definitions to occur anywhere within a function. JSLint is stricter.
+        JSLint expects that:
+        <ul>
+            <li>A var will be declared only once, and that it will be declared before it is used.</li>
+            <li>A function will be declared before it is used.</li>
+            <li>Parameters will not also be declared as var s.</li>
+        </ul>
+        JSLint does not expect:
+        <ul>
+            <li>The arguments array to be declared as a var .</li>
+            <li>That a variable will be declared in a block. This is because JavaScript blocks do
+            not have block scope. This can have unexpected consequences, so define all variables 
+            at the top of the function body.</li>
+        </ul>
+      </details>
+    </li>
+    <li>with</li>
+    <li>=</li>
+    <li>== and !=</li>
+    <li>
+      <details>
+        <summary>Labels</summary>
+        <br/>JavaScript allows any statement to have a label, and labels have a separate namespace.
+        JSLint is stricter.
+        JSLint expects labels only on statements that interact with break : switch , while , do ,
+        and for . JSLint expects that labels will be distinct from variables and parameters.
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary>Unreachable Code/summary>
+        <br/>JSLint expects that a return , break , continue , or throw statement will be followed by
+a } or case or default .
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary>Confusing Pluses and Minuses</summary>
+        JSLint expects that + will not be followed by + or ++ , and that - will not be followed
+  by - or -- . A misplaced space can turn + + into ++ , an error that is difficult to see. Use
+  parentheses to avoid confusion.
+      </details>
+    </li>
+    <li>
+      <deatils>
+        <summary>++ and --</summary>
+        The ++ (increment) and -- (decrement) operators have been known to contribute to
+        bad code by encouraging excessive trickiness. They are second only to faulty architecture 
+        in enabling viruses and other security menaces. The JSLint option plusplus
+        prohibits the use of these operators.
+      </deatils>
+    </li>
+    <li>
+      <details>
+        <summary>eval Is Evil</summary>
+        The eval function and its relatives ( Function , setTimeout , and setInterval ) provide
+access to the JavaScript compiler. This is sometimes useful, but in most cases it indi-
+cates the presence of extremely bad coding. The eval function is the most misused
+feature of JavaScript.
+      </details>
+    </li>
+    <li>
+      void
+    </li>
+    <li>Regular Expressions</li>
+    <li>Constructors and new</li>
+  </ul>
+</div>

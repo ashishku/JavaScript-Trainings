@@ -1,19 +1,25 @@
 <strong>Agenda</strong>
-<div>
-  <ol>
-  <% _.each(sessions, function(session) { %>
-      <li>
-          <a href="<%= session.url %>"><%= session.title %></a>
-          <% if(_.isArray(session.topics)) { %>
-              <ol>
-              <% _.each(session.topics, function(topic) { %>
-                  <li>
-                      <a href="<%= topic.url %>"><%= topic.title %></a>
-                  </li>
-              <% }); %>
-              </ol>
-          <% } %>
-      </li>
-  <% }); %>
-  </ol>
-</div>
+<table>
+  <tr>
+    <% _.each(sessions, function(column) { %>
+      <td style="vertical-align: top;">
+        <ul>
+        <% _.each(column, function(session) { %>
+            <li>
+                <a href="<%= session.url %>"><%= session.title %></a>
+                <% if(_.isArray(session.topics)) { %>
+                    <ol>
+                    <% _.each(session.topics, function(topic) { %>
+                        <li>
+                            <a href="<%= topic.url %>"><%= topic.title %></a>
+                        </li>
+                    <% }); %>
+                    </ol>
+                <% } %>
+            </li>
+        <% }); %>
+        </ul>
+      </td>
+    <% }); %>
+  </tr>
+</table>

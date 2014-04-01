@@ -1,0 +1,49 @@
+<div class="container">
+  <strong>Awful Parts</strong>
+  <br/>Things not easy to avoid.
+  <ul>
+    <li>DOM</li>
+    <li>Global Variables</li>
+    <li>Scope</li>
+    <li>Semicolon Insertion</li>
+    <li>Reserved Words
+      <br/>So many unused keywords
+    </li>
+    <li>Unicode</li>
+    <li>typeof
+      <br/>typeof null is not null
+    </li>
+    <li>parseInt
+      <br/> use radix
+    </li>
+    <li>+</li>
+    <li>Floating Point</li>
+    <li>NaN
+      <br/>Its "<em>N</em>ot <em>a</em> <em>N</em>umber" but
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>typeof</span> <span style='color:#007d45; '>NaN</span> <span style='color:#308080; '>===</span> <span style='color:#1060b6; '>'number'</span>       <span style='color:#595979; '>// true</span>
+  <span style='color:#007d45; '>NaN</span> <span style='color:#308080; '>===</span> <span style='color:#007d45; '>NaN</span>        <span style='color:#595979; '>// false</span>
+  <span style='color:#007d45; '>NaN</span> <span style='color:#308080; '>!==</span> <span style='color:#007d45; '>NaN</span>        <span style='color:#595979; '>// true</span>
+</pre>
+    </li>
+    <li>Phony Arrays
+      <br/>JavaScript does not have real arrays. That isn’t all bad. JavaScript’s arrays are really
+      easy to use. There is no need to give them a dimension, and they never generate out-
+      of-bounds errors. But their performance can be considerably worse than real arrays.
+      The typeof operator does not distinguish between arrays and objects. To determine
+      that a value is an array, you also need to consult its constructor property.
+    </li>
+    <li>Falsy Values
+      <br/>
+      There are many falsy values, but they are not interchangeable.
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>var</span> myObject <span style='color:#308080; '>=</span> <span style='color:#406080; '>{</span>a<span style='color:#406080; '>:</span><span style='color:#008c00; '>1</span><span style='color:#406080; '>}</span><span style='color:#406080; '>;</span>
+  <span style='color:#200080; font-weight:bold; '>var</span> value <span style='color:#308080; '>=</span> myObject<span style='color:#308080; '>.</span>b<span style='color:#406080; '>;</span>
+  <span style='color:#200080; font-weight:bold; '>if</span> <span style='color:#308080; '>(</span>value <span style='color:#308080; '>==</span> <span style='color:#0f4d75; '>null</span><span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>
+  <span style='color:#406080; '>}</span>
+</pre>
+    </li>
+    <li>hasOwnProperty</li>
+    <li>Object</li>
+  </ul>
+</div>
