@@ -1,0 +1,16 @@
+<canvas id="canvas"></canvas>
+<div class="well">
+  <ul id="actions_log">
+    <li>How a rendering engine works ....</li>
+    <li>User enters a new url in address bar.</li>
+    <li>Browser fetches the url.</li>
+    <li>Browser will cache the response.</li>
+    <li>Browser parses the response.</li>
+    <li>If browser sees a resource (i.e image, css or JavaScript) it will stop the parsing and will fetch the resource <span class="badge">*</span>>.</li>
+    <li>Once all resources are fetched and parse browser will create a document model tree.</li>
+    <li>Once tree is ready browser does the flow. In flow process it will calculate the positions and dimensions of individual elements of tree.</li>
+    <li>Browser will genrate a list of element wchich it needs to be displayed.</li>
+    <li>Browser will start painting the screen.</li>
+    <li>Finally indivual pixels will be genrated.</li>
+  </ul>
+</div>

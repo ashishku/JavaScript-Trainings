@@ -1,4 +1,5 @@
-define(['backbone', 'viewMap'], function(Backbone, viewMap) {
+/*global _*/
+define(['underscore','backbone', 'viewMap'], function(_, Backbone, viewMap) {
     return {
         init: function() {
             console.log('router init started');
@@ -17,7 +18,7 @@ define(['backbone', 'viewMap'], function(Backbone, viewMap) {
                 var viewUrl = 'views/' + viewMap[id].view + 'View';
                 require([viewUrl], function(View) {
                     var view = new View();
-                    view.render(viewMap[id].data);
+                    view.render(viewMap[id].data, viewMap[id].deps);
                 });
 
                 $('.pager').show();

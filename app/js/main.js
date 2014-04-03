@@ -7,7 +7,9 @@ require.config({
         'text'      : 'libs/require/text',
         'underscore': 'libs/underscore/underscore-min',
 
-        'partials'  : '../partials'
+        'partials'  : '../partials',
+        
+        'sessions'  : 'sessions'
     },
     shim: {
         'backbone': {

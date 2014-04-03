@@ -8,7 +8,8 @@ function genrateHtmlSessionDetails (options) {
     previous : options.previous ? options.previous : 'session' + options.sid + '_' + (parseInt(options.ssid) - 1),
     data     : {
       template: getTemplate(options)
-    }
+    },
+    deps    : options.deps || []
   }
 }
 
@@ -231,5 +232,16 @@ define({
     'session6_13' : genrateJsBinSessionDetails({sid:6, ssid: '13', url: '//jsbin.com/ashishJSDC9/1/embed?js'}),
     'session6_14' : genrateJsBinSessionDetails({sid:6, ssid: '14', url: '//jsbin.com/ashishJSIfElse/1/embed?js'}),
     'session6_15' : genrateHtmlSessionDetails ({sid:6, ssid: '15'}),
-    'session6_16' : genrateJsBinSessionDetails({sid:6, ssid: '16', url: '//jsbin.com/ashishJSDC10/1.js', next: 'session1'}),
+    'session6_16' : genrateJsBinSessionDetails({sid:6, ssid: '16', url: '//jsbin.com/ashishJSDC10/1.js', next: 'session7'}),
+
+    'session7'   : genrateSummarySessionDetails({
+      sid:7,
+      previous: 'session6_16',
+      session: "Browser",
+      subSessions: [
+        { url: '#side/session7_1',  title: 'Rendering Engine' }
+      ]
+    }),
+    'session7_1'  : genrateHtmlSessionDetails ({sid:7, ssid: '1', deps:['sessions/7/1']}),
+    'session7_2'  : genrateHtmlSessionDetails ({sid:7, ssid: '2', deps:['sessions/7/2']}),
 });
