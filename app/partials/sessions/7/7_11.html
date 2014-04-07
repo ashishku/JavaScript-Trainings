@@ -1,0 +1,20 @@
+<h4>Cross-Origin HTTP Requests</h4>
+As part of the same-origin security policy, the XMLHttpRequest object can normally issue HTTP requests only to the server from which the document that uses it
+was downloaded. 
+<br/>
+This restriction closes security holes, but it is heavy-handed and also prevents a number of legitimate uses for cross-origin requests.
+<br/>
+You can use cross-origin URLs with form and iframe elements, and the browser will display the resulting cross-origin document. 
+<br/>
+But because of the same-origin policy, the browser won’t allow the original script to inspect the contents of the cross-origin document. 
+<br/>
+With XMLHttpRequest, document contents are always exposed through the responseText property, so the same-origin policy cannot allow XMLHttpRequest to make cross-origin requests.
+<hr/>
+XHR2 allows cross-origin requests to websites that opt-in by sending appropriate CORS (Cross-Origin Resource Sharing) headers in their HTTP responses. 
+Current versions of Firefox, Safari, and Chrome support CORS and IE8 supports it through a proprietary XDomainRequest object.
+
+As a web programmer, there is nothing special you need to do to make this work: if the browser supports CORS for XMLHttpRequest and if the website you are trying to make
+a cross-origin request to has decided to allow cross-origin requests with CORS, the same-origin policy will be relaxed and your cross-origin requests will just work.
+
+<hr/>
+<h4>HTTP by &lt;script&gt;: JSONP</h4>

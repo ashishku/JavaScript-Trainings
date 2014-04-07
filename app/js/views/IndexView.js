@@ -56,9 +56,11 @@ define(['jquery', 'underscore', 'backbone', 'text!partials/indexView.html'], fun
                       { url: '#side/session6_15',  title: 'JSLint' }
                     ]},
                     { url: '#side/session7', title: 'Browser', topics:[
-                        { url: '#side/session7_1', title: 'Browser Objects' },
-                        { url: '#side/session7_2', title: 'Events' },
-                        { url: '#side/session7_3', title: 'Ajax' }
+                      { url: '#side/session7_1',  title: 'Rendering Engine' },
+                      { url: '#side/session7_2',  title: 'JavaScript Engine' },
+                      { url: '#side/session7_4',  title: 'DOM' },
+                      { url: '#side/session7_6',  title: 'Event' },
+                      { url: '#side/session7_9',  title: 'AJAX' }
                     ]},
                     { url: '#side/session8', title: 'Intoduction to HTML5' }
                   ]

@@ -1,0 +1,45 @@
+<h4>Events</h4>
+<ul>
+  <li>on<em>Event</em>
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>var</span> element <span style='color:#308080; '>=</span> document<span style='color:#308080; '>.</span>getElementById<span style='color:#308080; '>(</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>element</span><span style='color:#800000; '>"</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+  element<span style='color:#308080; '>[</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>on</span><span style='color:#800000; '>"</span> <span style='color:#308080; '>+</span> event<span style='color:#308080; '>]</span> <span style='color:#308080; '>=</span> <span style='color:#200080; font-weight:bold; '>function</span><span style='color:#308080; '>(</span><span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>    <span style='color:#406080; '>}</span>
+</pre>
+  </li>
+  <li>addEventListener
+<pre style='color:#000020;background:#f6f8ff;'>
+  window<span style='color:#308080; '>.</span>addEventListener<span style='color:#308080; '>(</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>load</span><span style='color:#800000; '>"</span><span style='color:#308080; '>,</span> <span style='color:#200080; font-weight:bold; '>function</span><span style='color:#308080; '>(</span><span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span><span style='color:#308080; '>.</span><span style='color:#308080; '>.</span><span style='color:#308080; '>.</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span> <span style='color:#0f4d75; '>false</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+  element<span style='color:#308080; '>.</span>addEventListener<span style='color:#308080; '>(</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>click</span><span style='color:#800000; '>"</span><span style='color:#308080; '>,</span> <span style='color:#200080; font-weight:bold; '>function</span><span style='color:#308080; '>(</span><span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span><span style='color:#308080; '>.</span><span style='color:#308080; '>.</span><span style='color:#308080; '>.</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span> <span style='color:#0f4d75; '>false</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+</pre>
+  </li>
+  <li>attachEvent
+    <pre style='color:#000020;background:#f6f8ff;'>
+  window<span style='color:#308080; '>.</span>attachEvent<span style='color:#308080; '>(</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>load</span><span style='color:#800000; '>"</span><span style='color:#308080; '>,</span> <span style='color:#200080; font-weight:bold; '>function</span><span style='color:#308080; '>(</span><span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span><span style='color:#308080; '>.</span><span style='color:#308080; '>.</span><span style='color:#308080; '>.</span><span style='color:#406080; '>}</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+  element<span style='color:#308080; '>.</span>attachEvent<span style='color:#308080; '>(</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>click</span><span style='color:#800000; '>"</span><span style='color:#308080; '>,</span> <span style='color:#200080; font-weight:bold; '>function</span><span style='color:#308080; '>(</span><span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span><span style='color:#308080; '>.</span><span style='color:#308080; '>.</span><span style='color:#308080; '>.</span><span style='color:#406080; '>}</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+</pre>
+  </li>
+</ul>
+
+<h4>Event Handler Argument</h4>
+<pre style='color:#000020;background:#f6f8ff;'>
+<span style='color:#200080; font-weight:bold; '>function</span> handler<span style='color:#308080; '>(</span>event<span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>
+  event <span style='color:#308080; '>=</span> event <span style='color:#308080; '>||</span> window<span style='color:#308080; '>.</span>event<span style='color:#406080; '>;</span>
+  <span style='color:#595979; '>// Handler code goes here</span>
+<span style='color:#406080; '>}</span>
+</pre>
+<h4>Event Handler Context</h4>
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>function</span> addEvent<span style='color:#308080; '>(</span>target<span style='color:#308080; '>,</span> type<span style='color:#308080; '>,</span> handler<span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>
+    <span style='color:#200080; font-weight:bold; '>if</span> <span style='color:#308080; '>(</span>target<span style='color:#308080; '>.</span>addEventListener<span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>
+      target<span style='color:#308080; '>.</span>addEventListener<span style='color:#308080; '>(</span>type<span style='color:#308080; '>,</span> handler<span style='color:#308080; '>,</span> <span style='color:#0f4d75; '>false</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+    <span style='color:#406080; '>}</span>
+    <span style='color:#200080; font-weight:bold; '>else</span> <span style='color:#406080; '>{</span>
+      target<span style='color:#308080; '>.</span>attachEvent<span style='color:#308080; '>(</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>on</span><span style='color:#800000; '>"</span> <span style='color:#308080; '>+</span> type<span style='color:#308080; '>,</span>
+        <span style='color:#200080; font-weight:bold; '>function</span><span style='color:#308080; '>(</span>event<span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>
+        <span style='color:#595979; '>// Invoke the handler as a method of target,</span>
+        <span style='color:#595979; '>// passing on the event object</span>
+        <span style='color:#200080; font-weight:bold; '>return</span> handler<span style='color:#308080; '>.</span>call<span style='color:#308080; '>(</span>target<span style='color:#308080; '>,</span> event<span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+     <span style='color:#406080; '>}</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+    <span style='color:#406080; '>}</span>
+  <span style='color:#406080; '>}</span>
+</pre>

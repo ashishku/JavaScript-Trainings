@@ -1,0 +1,43 @@
+<h4>AJAX / AJAJ</h4>
+<ul>
+  <li><strong>XMLHttpRequest</strong>
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>var</span> request <span style='color:#308080; '>=</span> <span style='color:#200080; font-weight:bold; '>new</span> XMLHttpRequest<span style='color:#308080; '>(</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+  
+  <span style='color:#595979; '>// Emulate the XMLHttpRequest() constructor in IE5 and IE6</span>
+  <span style='color:#200080; font-weight:bold; '>if</span> <span style='color:#308080; '>(</span>window<span style='color:#308080; '>.</span>XMLHttpRequest <span style='color:#308080; '>===</span> undefined<span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>
+    window<span style='color:#308080; '>.</span>XMLHttpRequest <span style='color:#308080; '>=</span> <span style='color:#200080; font-weight:bold; '>function</span><span style='color:#308080; '>(</span><span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>
+    <span style='color:#200080; font-weight:bold; '>try</span> <span style='color:#406080; '>{</span>
+      <span style='color:#595979; '>// Use the latest version of the ActiveX object if available</span>
+      <span style='color:#200080; font-weight:bold; '>return</span> <span style='color:#200080; font-weight:bold; '>new</span> <span style='color:#007d45; '>ActiveXObject</span><span style='color:#308080; '>(</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>Msxml2.XMLHTTP.6.0</span><span style='color:#800000; '>"</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+    <span style='color:#406080; '>}</span>
+    <span style='color:#200080; font-weight:bold; '>catch</span> <span style='color:#308080; '>(</span>e1<span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>
+      <span style='color:#200080; font-weight:bold; '>try</span> <span style='color:#406080; '>{</span>
+        <span style='color:#595979; '>// Otherwise fall back on an older version</span>
+        <span style='color:#200080; font-weight:bold; '>return</span> <span style='color:#200080; font-weight:bold; '>new</span> <span style='color:#007d45; '>ActiveXObject</span><span style='color:#308080; '>(</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>Msxml2.XMLHTTP.3.0</span><span style='color:#800000; '>"</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+      <span style='color:#406080; '>}</span>
+      <span style='color:#200080; font-weight:bold; '>catch</span><span style='color:#308080; '>(</span>e2<span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>
+        <span style='color:#595979; '>// Otherwise, throw an error</span>
+        <span style='color:#200080; font-weight:bold; '>throw</span> <span style='color:#200080; font-weight:bold; '>new</span> Error<span style='color:#308080; '>(</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>XMLHttpRequest is not supported</span><span style='color:#800000; '>"</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+      <span style='color:#406080; '>}</span>
+    <span style='color:#406080; '>}</span>
+  <span style='color:#406080; '>}</span><span style='color:#406080; '>;</span>
+  <span style='color:#406080; '>}</span>
+</pre>
+  </li>
+  <li><strong>HTML Request</strong>
+    <ol>
+      <li>the HTTP request method or “verb”</li>
+      <li>the URL being requested</li>
+      <li>an optional set of request headers, which may include authentication information</li>
+      <li>an optional request body</li>
+    </ol>
+  </li>
+  <li><strong>HTML Response</strong>
+    <ol>
+      <li>a numeric and textual status code that indicates the success or failure of the request</li>
+      <li>a set of response headers</li>
+      <li>the response body</li>
+    </ol>
+  </li>
+</ul>

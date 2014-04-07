@@ -9,7 +9,9 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
                 that.$el.html( html );
 
                 if(deps.length > 0) {
-                  require(deps, function() { });
+                  require(deps, function(x) {
+                    x();
+                  });
                 }
             });
         },

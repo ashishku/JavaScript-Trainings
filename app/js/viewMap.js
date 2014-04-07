@@ -239,9 +239,22 @@ define({
       previous: 'session6_16',
       session: "Browser",
       subSessions: [
-        { url: '#side/session7_1',  title: 'Rendering Engine' }
+        { url: '#side/session7_1',  title: 'Rendering Engine' },
+        { url: '#side/session7_2',  title: 'JavaScript Engine' },
+        { url: '#side/session7_4',  title: 'DOM' },
+        { url: '#side/session7_6',  title: 'Event' },
+        { url: '#side/session7_9',  title: 'AJAX' }
       ]
     }),
     'session7_1'  : genrateHtmlSessionDetails ({sid:7, ssid: '1', deps:['sessions/7/1']}),
     'session7_2'  : genrateHtmlSessionDetails ({sid:7, ssid: '2', deps:['sessions/7/2']}),
+    'session7_3'  : genrateJsBinSessionDetails({sid:7, ssid: '3', url: '//jsbin.com/ashishJSSetTimeOut/18/embed?js,html'}),
+    'session7_4'  : genrateHtmlSessionDetails ({sid:7, ssid: '4'}),
+    'session7_5'  : genrateHtmlSessionDetails ({sid:7, ssid: '5', deps:['sessions/7/5']}),
+    'session7_6'  : genrateHtmlSessionDetails ({sid:7, ssid: '6'}),
+    'session7_7'  : genrateHtmlSessionDetails ({sid:7, ssid: '7'}),
+    'session7_8'  : genrateHtmlSessionDetails ({sid:7, ssid: '8'}),
+    'session7_9'  : genrateHtmlSessionDetails ({sid:7, ssid: '9'}),
+    'session7_10' : genrateJsBinSessionDetails({sid:7, ssid: '10', url: '//jsbin.com/ashishJSAjax/2/embed?js,console'}),
+    'session7_11' : genrateHtmlSessionDetails ({sid:7, ssid: '11'}),
 });

@@ -1,0 +1,42 @@
+<h4>Type of Events</h4>
+<ul>
+  <li><strong>Device-dependent input events</strong><br/>
+These are events that are directly tied to a specific input device, such as the mouse
+or keyboard. They include legacy event types such as “mousedown”, “mousemove”, “mouseup”, “keydown”, “keypress”, and “keyup” 
+and also new touch specific events like “touchmove” and “gesturechange”.
+  </li>
+  <li><strong>Device-independent input events</strong><br/>
+  These are input events that are not directly tied to a specific input device. The click
+event, for example, indicates that a link or button (or other document element)
+has been activated. This is often done via a mouse click, but it could also be done
+by keyboard or (on touch-sensitive devices) by gesture.
+  </li>
+  <li><strong>User interface events</strong><br/>
+  UI events are higher-level events, often on HTML form elements that define a user
+interface for a web application. They include the focus event (when a text input
+field gains keyboard focus), the change event when the user changes the value
+displayed by a form element, and the submit event when the user clicks a Submit
+button in a form.
+  </li>
+  <li><strong>State-change events</strong><br/>
+    Some events are not triggered directly by user activity, but by network or browser
+activity, and indicate some kind of lifecycle or state-related change. The load event,
+fired on the Window object when the document is fully loaded, is probably the
+most commonly used of these events.
+  </li>
+  <li><strong>API-specific events</strong><br/>
+    A number of web APIs defined by HTML5 and related specifications include their
+own event types. The drag-and-drop API defines events such as “drag-start”, “dragenter”, “dragover”, and “drop”. 
+Applications that want to define custom drag sources or drop targets must handle some of these events.
+The HTML5 video and audio elements define a long list of associated event types
+such as “waiting”, “playing”, “seeking”, “volumechange”, and so on. These events
+are usually only of interest to web apps that want to define custom controls for
+video or audio playback.
+  </li>
+  <li><strong>Timers and error handlers</strong><br/>
+    Timers and error handlers  are part of
+client-side JavaScript’s asynchronous programming model and are similar to
+events. Although timers and error handlers are not discussed in this chapter, it is
+useful to think of them as related to event handling..
+  </li>
+</ul>

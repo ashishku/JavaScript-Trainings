@@ -331,5 +331,7 @@ define(['jquery', 'sessions/canvas'], function($, Canvas) {
   $('#actions_log li').hide();
   $('#actions_log li').eq(0).show();
 
-  document.onkeydown = onKeyPress;
+  return function() {
+    $(document).keydown(onKeyPress);
+  };
 });

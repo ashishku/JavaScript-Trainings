@@ -1,0 +1,27 @@
+<ul>
+  <li><strong>Handler Return Value</strong></li>
+  <li><strong>Invocation Order</strong><br/>
+    <ul>
+      <li>Handlers registered by setting an object property or HTML attribute, if any, are
+always invoked first.</li>
+      <li>Handlers registered with addEventListener() are invoked in the order in which
+they were registered.</li>
+      <li>Handlers registered with attachEvent() may be invoked in any order and your code
+should not depend on sequential invocation.</li>
+    </ul>
+  </li>
+  <li><strong>Event Propagation</strong></li>
+  <li><strong>Event Cancellation</strong>
+<pre style='color:#000020;background:#f6f8ff;'>
+  <span style='color:#200080; font-weight:bold; '>function</span> cancelHandler<span style='color:#308080; '>(</span>event<span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>
+    <span style='color:#200080; font-weight:bold; '>var</span> event <span style='color:#308080; '>=</span> event <span style='color:#308080; '>||</span> window<span style='color:#308080; '>.</span>event<span style='color:#406080; '>;</span> <span style='color:#595979; '>// For IE</span>
+    <span style='color:#595979; '>/* Do something to handle the event here */</span>
+  
+    <span style='color:#595979; '>// Now cancel the default action associated with the event</span>
+    <span style='color:#200080; font-weight:bold; '>if</span> <span style='color:#308080; '>(</span>event<span style='color:#308080; '>.</span>preventDefault<span style='color:#308080; '>)</span> event<span style='color:#308080; '>.</span>preventDefault<span style='color:#308080; '>(</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span> <span style='color:#595979; '>// Standard technique</span>
+    <span style='color:#200080; font-weight:bold; '>if</span> <span style='color:#308080; '>(</span>event<span style='color:#308080; '>.</span>returnValue<span style='color:#308080; '>)</span> event<span style='color:#308080; '>.</span>returnValue <span style='color:#308080; '>=</span> <span style='color:#0f4d75; '>false</span><span style='color:#406080; '>;</span> <span style='color:#595979; '>// IE</span>
+    <span style='color:#200080; font-weight:bold; '>return</span> <span style='color:#0f4d75; '>false</span><span style='color:#406080; '>;</span>                                     <span style='color:#595979; '>// For handlers registered as object properties</span>
+  <span style='color:#406080; '>}</span>
+</pre>
+  </li>
+</ul>
