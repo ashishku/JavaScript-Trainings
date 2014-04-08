@@ -62,7 +62,14 @@ define(['jquery', 'underscore', 'backbone', 'text!partials/indexView.html'], fun
                       { url: '#side/session7_6',  title: 'Event' },
                       { url: '#side/session7_9',  title: 'AJAX' }
                     ]},
-                    { url: '#side/session8', title: 'Intoduction to HTML5' }
+                    { url: '#side/session8', title: 'Intoduction to HTML5 Apis', topics:[
+                      { url: '#side/session8_1',  title: 'Client Side Storage' },
+                      { url: '#side/session8_3',  title: 'Geolocation' },
+                      { url: '#side/session8_4',  title: 'Push State' },
+                      { url: '#side/session8_5',  title: 'Web worker' },
+                      { url: '#side/session8_6',  title: 'Typeed Arrays' },
+                      { url: '#side/session8_7',  title: 'Misc' }
+                    ]}
                   ]
                 ]
             };

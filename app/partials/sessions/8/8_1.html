@@ -1,0 +1,53 @@
+<h4>Client Side Storage</h4>
+<ul>
+  <li>
+    <span class="label label-info">Cookies</span>
+    <br/>Cookies are an old client-side storage mechanism that was designed for use by
+server-side scripts. An awkward JavaScript API makes cookies scriptable on the
+client-side, but they are hard to use and are suitable only for storing small amounts
+of textual data. Also, any data stored as cookies is always transmitted to the server
+with every HTTP request, even if the data is only of interest to the client.
+  </li>
+  <li>
+    <span class="label label-info">Web Storage</span>
+    <br/>Web Storage is an API that was originally defined as part of HTML5 but was spun
+off as a standalone specification. That specification is still in draft form, but it is
+partially (and interoperably) implemented in all current browsers including IE8.
+    <ul>
+      <li>localStorage</li>
+      <li>sessionStorage</li>
+    </ul>
+  </li>
+  <li>
+    <span class="label label-info">IE userData</span>
+    <br/>Microsoft implements its own proprietary client-side storage mechanism, known
+as “userData,” in IE5 and later. userData enables the storage of medium amounts
+of string data and can be used as an alternative to Web Storage in versions of IE
+before IE8.
+  </li>
+  <li>
+    <span class="label label-info">Offline Web Applications</span>
+    <br/>HTML5 defines an “Offline Web Applications” API that allows the caching of web
+pages and their associated resources (scripts, CSS files, images, and so on). This is
+client-side storage for web applications themselves rather than just their data, and
+it allows web apps to install themselves so that they are available even when there
+is no connection to the Internet.
+  </li>
+  <li>
+    <span class="label label-info">Web Databases</span>
+    <br/>Developers who need to work with really huge amounts of data like to use data-
+bases, and the most recent browsers have started to integrate client-side database
+functionality into their browsers. Safari, Chrome, and Opera include a client-side
+API to a SQL database. The standardization effort for that API has failed, however,
+and it is unlikely to be implemented by Firefox or IE. An alternative database API
+is being standardized under the name “Indexed Database API.” This is an API to
+a simple object database without a query language. Both of the client-side database
+APIs are asynchronous and require the use of event handlers, which makes them
+somewhat complicated.
+  </li>
+  <li>
+    <span class="label label-info">Filesystem API</span>
+    <br/>Modern browsers support a File object that allows user selected files to be uploaded through an XMLHttpRequest. 
+    Related draft standards define an API for obtaining a private local filesystem and for reading and writing files from and to that filesystem.
+  </li>
+</ul>

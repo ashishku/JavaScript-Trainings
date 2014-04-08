@@ -1,0 +1,50 @@
+<h4>Typed Arrays</h4>
+JavaScript arrays are general-purpose objects with numeric properties and a special length property. Array elements can be any JavaScript value. Arrays can grow or shrink dynamically and can be sparse. JavaScript implementations perform lots of optimizations
+so that typical uses of JavaScript arrays are very fast. Typed arrays are array-like objects that differ from regular arrays in some important ways:
+<ul>
+  <li>The elements of a typed array are all numbers. The constructor used to create the typed array determines the type (signed or unsigned integers or floating point) and size (in bits) of the numbers.</li>
+  <li>Typed arrays have a fixed length>.</li>
+  <li>The elements of a typed array are always initialized to 0 when the array is created.</li>
+</ul>
+<table class="table table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>Constructor</th>
+      <th>Neumeric Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Int8Array()</td>
+      <td>signed bytes</td>
+    </tr>
+    <tr>
+      <td>Uint8Array()</td>
+      <td>unsigned bytes</td>
+    </tr>
+    <tr>
+      <td>Int16Array()</td>
+      <td>signed 16-bit short integers</td>
+    </tr>
+    <tr>
+      <td>Uint16Array()</td>
+      <td>unsigned 16-bit short integers</td>
+    </tr>
+    <tr>
+      <td>Int32Array()</td>
+      <td>signed 32-bit integers</td>
+    </tr>
+    <tr>
+      <td>Uint32Array()</td>
+      <td>unsigned 32-bit integers</td>
+    </tr>
+    <tr>
+      <td>Float32Array()</td>
+      <td>32-bit floating-point value</td>
+    </tr>
+    <tr>
+      <td>Float64Array()</td>
+      <td>64-bit floating-point value: a regular JavaScript number</td>
+    </tr>
+  </tbody>
+</table>

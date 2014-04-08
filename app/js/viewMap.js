@@ -217,7 +217,7 @@ define({
         { url: '#side/session6_15',  title: 'JSLint' }
       ]
     }),
-    'session6_1'  : genrateHtmlSessionDetails ({sid:6, ssid: '1'}),
+    'session6_1'  : genrateHtmlSessionDetails ({sid:6, ssid: '1', previous: 'session6'}),
     'session6_2'  : genrateHtmlSessionDetails ({sid:6, ssid: '2'}),
     'session6_3'  : genrateHtmlSessionDetails ({sid:6, ssid: '3'}),
     'session6_4'  : genrateJsBinSessionDetails({sid:6, ssid: '4',  url: '//jsbin.com/ashishJSDC0/1/embed?js'}),
@@ -246,7 +246,7 @@ define({
         { url: '#side/session7_9',  title: 'AJAX' }
       ]
     }),
-    'session7_1'  : genrateHtmlSessionDetails ({sid:7, ssid: '1', deps:['sessions/7/1']}),
+    'session7_1'  : genrateHtmlSessionDetails ({sid:7, ssid: '1', deps:['sessions/7/1'], previous: 'session7'}),
     'session7_2'  : genrateHtmlSessionDetails ({sid:7, ssid: '2', deps:['sessions/7/2']}),
     'session7_3'  : genrateJsBinSessionDetails({sid:7, ssid: '3', url: '//jsbin.com/ashishJSSetTimeOut/18/embed?js,html'}),
     'session7_4'  : genrateHtmlSessionDetails ({sid:7, ssid: '4'}),
@@ -256,5 +256,26 @@ define({
     'session7_8'  : genrateHtmlSessionDetails ({sid:7, ssid: '8'}),
     'session7_9'  : genrateHtmlSessionDetails ({sid:7, ssid: '9'}),
     'session7_10' : genrateJsBinSessionDetails({sid:7, ssid: '10', url: '//jsbin.com/ashishJSAjax/2/embed?js,console'}),
-    'session7_11' : genrateHtmlSessionDetails ({sid:7, ssid: '11'}),
+    'session7_11' : genrateHtmlSessionDetails ({sid:7, ssid: '11', next: 'session8'}),
+
+    'session8'   : genrateSummarySessionDetails({
+      sid:8,
+      previous: 'session7_11',
+      session: "Intoduction to HTML5 Apis",
+      subSessions: [
+        { url: '#side/session8_1',  title: 'Client Side Storage' },
+        { url: '#side/session8_3',  title: 'Geolocation' },
+        { url: '#side/session8_4',  title: 'Push State' },
+        { url: '#side/session8_5',  title: 'Web worker' },
+        { url: '#side/session8_6',  title: 'Typeed Arrays' },
+        { url: '#side/session8_7',  title: 'Misc' }
+      ]
+    }),
+    'session8_1'  : genrateHtmlSessionDetails ({sid:8, ssid: '1', previous: 'session8'}),
+    'session8_2'  : genrateJsBinSessionDetails({sid:8, ssid: '2',  url: '//jsbin.com/ashishJSStorage/31/embed?js'}),
+    'session8_3'  : genrateJsBinSessionDetails({sid:8, ssid: '3',  url: '//jsbin.com/ashishJSGeo/1/embed?js'}),
+    'session8_4'  : genrateJsBinSessionDetails({sid:8, ssid: '4',  url: '//jsbin.com/ashishJSPushState/1/embed?js,html'}),
+    'session8_5'  : genrateJsBinSessionDetails({sid:8, ssid: '5',  url: '//jsbin.com/ashishJSWebWorker/3/embed?js,html'}),
+    'session8_6'  : genrateHtmlSessionDetails ({sid:8, ssid: '6'}),
+    'session8_7'  : genrateHtmlSessionDetails ({sid:8, ssid: '7', next: '#'}),
 });
